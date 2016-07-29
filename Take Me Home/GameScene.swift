@@ -249,9 +249,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setUpBullets() {
-        bullets = SKSpriteNode(imageNamed: "")
+        bullets = SKSpriteNode(imageNamed: "rocket")
+        bullets.xScale = 0.1
+        bullets.yScale = 0.1
+        bullets.zPosition = 1
         let position = ufo.position
         bullets.position = position
+        
+        // bullets Physics
+        bullets.physicsBody = SKPhysicsBody(rectangleOfSize:(bullets.size))
+        bullets.physicsBody!.affectedByGravity = false
+        bullets.physicsBody!.dynamic = true
+        
+        // bullets will collide with nothing and contact only with asteroid
+        bullets.physicsBody!.categoryBitMask   = PhysicsCategory.bullets
+        bullets.physicsBody!.collisionBitMask  = PhysicsCategory.None
+        bullets.physicsBody!.contactTestBitMask = PhysicsCategory.Asteroid
+        
+        let action = SKAction.moveToX(self.size.width + 30, duration: 0.6)
+        let shotSoundEffect = SKAction.playSoundFileNamed("gunshot.mp3", waitForCompletion: false)
+        let actionDone = SKAction.removeFromParent()
+        bullets.runAction(SKAction.sequence([shotSoundEffect, action, actionDone]))
+        addChild(bullets)
+
     }
     
     // this is the lifeBar in the game
@@ -315,8 +335,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         // delay between healthUps
-        let randomTime: UInt32 = 30
-        let minTime = 20.0
+        let randomTime: UInt32 = 5
+        let minTime = 2.0
         let randomDuration = (Double(arc4random_uniform(randomTime)) + minTime)
         let shootPowerUpsDelay = SKAction.waitForDuration(randomDuration)
         let shootPowerUpsSequence = SKAction.sequence([shootPowerUpsDelay, createShootPowerUps])
@@ -718,17 +738,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if collision == PhysicsCategory.ShootPowerUp | PhysicsCategory.Player {
             
             if contact.bodyA.node!.name == "shootPowerUp" {
-                setUpShootPoof(contact.bodyA.node!.position)
+               
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 canShootPowerUp = true
                 self.removeActionForKey("actionB")
             } else {
-                setUpShootPoof(contact.bodyA.node!.position)
+        
                 physicsObjectsToRemove.append(contact.bodyB.node!)
                 canShootPowerUp = true
                 self.removeActionForKey("actionB")
             }
             
+        } else if collision == PhysicsCategory.bullets | PhysicsCategory.Asteroid {
+            
+            if contact.bodyA.node!.name == "bullets" {
+                
+                physicsObjectsToRemove.append(contact.bodyA.node!)
+                self.removeActionForKey("actionB")
+            } else {
+                
+                physicsObjectsToRemove.append(contact.bodyB.node!)
+                self.removeActionForKey("actionB")
+            }
             // no contact
         } else if collision == PhysicsCategory.Player | PhysicsCategory.None {
             //print("*Player hit nothing*")
@@ -754,6 +785,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let node = nodeAtPoint(location)
         
+        
+        if canShootPowerUp == true {
+            setUpBullets()
+        }
+        
         // Game not ready to play
         
         if state == .GameOver {
@@ -773,7 +809,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let fadeAway = SKAction.fadeOutWithDuration(0.5)
             let sequence = SKAction.sequence([fadeAway])
             controlButton.runAction(sequence)
-            
         }
         
         if node.name == "buttonName" {
@@ -857,7 +892,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setUpSmoke(ufo.position)
         
-        
+        canShootPowerUp = false
     
         setUpRestartButton()
         setUpHomeButton()
