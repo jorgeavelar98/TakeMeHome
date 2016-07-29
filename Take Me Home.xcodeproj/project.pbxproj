@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD0214901D346867001D3F8A /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD02148F1D346867001D3F8A /* MainScene.sks */; };
+		DD062C8F1D35A8D1008BE51B /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD062C8D1D35A8D1008BE51B /* Stars.sks */; };
+		DD06B0E51D42DA43007374B6 /* InsaneModeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */; };
+		DD06B0E71D42DAB7007374B6 /* InsaneModeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */; };
+		DD0B761F1D3ECBEC00FF7F81 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */; };
+		DD0E16231D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */; };
+		DD4522A71D3FFED900FBA8F5 /* mainBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */; };
+		DD4759E51D37F61C009F2860 /* asteroidPoof.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD4759E41D37F61C009F2860 /* asteroidPoof.sks */; };
+		DD50A60A1D36FB1000E85E7F /* healthUpPoof.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD50A6081D36FB1000E85E7F /* healthUpPoof.sks */; };
+		DD5F92C81D3D46DC00162834 /* Eurostile in Resources */ = {isa = PBXBuildFile; fileRef = DD5F92C71D3D46DC00162834 /* Eurostile */; };
+		DD5F92CC1D3D70AB00162834 /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD5F92CB1D3D70AB00162834 /* explosion.sks */; };
+		DD5F92D21D3D82EF00162834 /* smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD5F92D11D3D82EF00162834 /* smoke.sks */; };
+		DD6F59071D3EA41700DA69A0 /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = DD6F59061D3EA41700DA69A0 /* Futura.ttc */; };
+		DDA0BD441D47DF73004798CC /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */; };
+		DDA0BD461D47E4F2004798CC /* healthUpSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */; };
+		DDA0BD4A1D481128004798CC /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD491D481128004798CC /* explosion.mp3 */; };
+		DDA0BD4C1D48163C004798CC /* asteroidExplosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */; };
+		DDA0BD4E1D48253C004798CC /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0BD4D1D48253C004798CC /* SKTAudio.swift */; };
+		DDC5B2F41D40362D00CD66B8 /* cs_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC5B2F31D40362D00CD66B8 /* cs_regular.ttf */; };
+		DDFF536D1D3455EC00064C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF536C1D3455EC00064C5D /* AppDelegate.swift */; };
+		DDFF53711D3455EC00064C5D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF53701D3455EC00064C5D /* GameScene.swift */; };
+		DDFF53731D3455EC00064C5D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF53721D3455EC00064C5D /* GameViewController.swift */; };
+		DDFF53761D3455EC00064C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFF53741D3455EC00064C5D /* Main.storyboard */; };
+		DDFF53781D3455EC00064C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDFF53771D3455EC00064C5D /* Assets.xcassets */; };
+		DDFF537B1D3455EC00064C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDFF53791D3455EC00064C5D /* LaunchScreen.storyboard */; };
+		DDFF53861D3455EC00064C5D /* Take_Me_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF53851D3455EC00064C5D /* Take_Me_HomeTests.swift */; };
+		DDFF53911D3455EC00064C5D /* Take_Me_HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF53901D3455EC00064C5D /* Take_Me_HomeUITests.swift */; };
+		DDFF539F1D3456FC00064C5D /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF539E1D3456FC00064C5D /* MainScene.swift */; };
+		DDFF53A11D345C3F00064C5D /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF53A01D345C3F00064C5D /* MSButtonNode.swift */; };
+		DDFF53A81D34623300064C5D /* MSReferenceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF53A71D34623300064C5D /* MSReferenceNode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDFF53821D3455EC00064C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFF53611D3455EC00064C5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDFF53681D3455EC00064C5D;
+			remoteInfo = "Take Me Home";
+		};
+		DDFF538D1D3455EC00064C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDFF53611D3455EC00064C5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDFF53681D3455EC00064C5D;
+			remoteInfo = "Take Me Home";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD02148F1D346867001D3F8A /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
+		DD062C8D1D35A8D1008BE51B /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Stars.sks; path = ../Stars.sks; sourceTree = "<group>"; };
+		DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsaneModeScene.swift; sourceTree = "<group>"; };
+		DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = InsaneModeScene.sks; path = ../InsaneModeScene.sks; sourceTree = "<group>"; };
+		DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
+		DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = mainBackground.sks; path = ../mainBackground.sks; sourceTree = "<group>"; };
+		DD4759E41D37F61C009F2860 /* asteroidPoof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = asteroidPoof.sks; path = ../asteroidPoof.sks; sourceTree = "<group>"; };
+		DD50A6081D36FB1000E85E7F /* healthUpPoof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = healthUpPoof.sks; sourceTree = "<group>"; };
+		DD5F92C71D3D46DC00162834 /* Eurostile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Eurostile; sourceTree = "<group>"; };
+		DD5F92CB1D3D70AB00162834 /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
+		DD5F92D11D3D82EF00162834 /* smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = smoke.sks; sourceTree = "<group>"; };
+		DD6F59061D3EA41700DA69A0 /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
+		DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = healthUpSound.mp3; sourceTree = "<group>"; };
+		DDA0BD491D481128004798CC /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asteroidExplosion.mp3; sourceTree = "<group>"; };
+		DDA0BD4D1D48253C004798CC /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
+		DDC5B2F31D40362D00CD66B8 /* cs_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cs_regular.ttf; sourceTree = "<group>"; };
+		DDFF53691D3455EC00064C5D /* Take Me Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Me Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDFF536C1D3455EC00064C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DDFF53701D3455EC00064C5D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		DDFF53721D3455EC00064C5D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DDFF53751D3455EC00064C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDFF53771D3455EC00064C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DDFF537A1D3455EC00064C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DDFF537C1D3455EC00064C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDFF53811D3455EC00064C5D /* Take Me HomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take Me HomeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDFF53851D3455EC00064C5D /* Take_Me_HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_Me_HomeTests.swift; sourceTree = "<group>"; };
+		DDFF53871D3455EC00064C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDFF538C1D3455EC00064C5D /* Take Me HomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Take Me HomeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDFF53901D3455EC00064C5D /* Take_Me_HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take_Me_HomeUITests.swift; sourceTree = "<group>"; };
+		DDFF53921D3455EC00064C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDFF539E1D3456FC00064C5D /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
+		DDFF53A01D345C3F00064C5D /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		DDFF53A71D34623300064C5D /* MSReferenceNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSReferenceNode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DDFF53661D3455EC00064C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDFF537E1D3455EC00064C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDFF53891D3455EC00064C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD4522A51D3FFE1B00FBA8F5 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */,
+				DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */,
+				DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */,
+				DDA0BD491D481128004798CC /* explosion.mp3 */,
+				DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */,
+				DD5F92CB1D3D70AB00162834 /* explosion.sks */,
+				DD062C8D1D35A8D1008BE51B /* Stars.sks */,
+				DD4759E41D37F61C009F2860 /* asteroidPoof.sks */,
+				DD50A6081D36FB1000E85E7F /* healthUpPoof.sks */,
+				DD5F92D11D3D82EF00162834 /* smoke.sks */,
+			);
+			name = Effects;
+			sourceTree = "<group>";
+		};
+		DDFF53601D3455EB00064C5D = {
+			isa = PBXGroup;
+			children = (
+				DDFF536B1D3455EC00064C5D /* Take Me Home */,
+				DDFF53841D3455EC00064C5D /* Take Me HomeTests */,
+				DDFF538F1D3455EC00064C5D /* Take Me HomeUITests */,
+				DDFF536A1D3455EC00064C5D /* Products */,
+				DD5F92C71D3D46DC00162834 /* Eurostile */,
+				DD6F59061D3EA41700DA69A0 /* Futura.ttc */,
+				DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */,
+				DDC5B2F31D40362D00CD66B8 /* cs_regular.ttf */,
+			);
+			sourceTree = "<group>";
+		};
+		DDFF536A1D3455EC00064C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DDFF53691D3455EC00064C5D /* Take Me Home.app */,
+				DDFF53811D3455EC00064C5D /* Take Me HomeTests.xctest */,
+				DDFF538C1D3455EC00064C5D /* Take Me HomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDFF536B1D3455EC00064C5D /* Take Me Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD4522A51D3FFE1B00FBA8F5 /* Effects */,
+				DDFF536C1D3455EC00064C5D /* AppDelegate.swift */,
+				DDA0BD4D1D48253C004798CC /* SKTAudio.swift */,
+				DDFF53A71D34623300064C5D /* MSReferenceNode.swift */,
+				DDFF53A01D345C3F00064C5D /* MSButtonNode.swift */,
+				DDFF53721D3455EC00064C5D /* GameViewController.swift */,
+				DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */,
+				DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */,
+				DDFF53701D3455EC00064C5D /* GameScene.swift */,
+				DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */,
+				DDFF539E1D3456FC00064C5D /* MainScene.swift */,
+				DD02148F1D346867001D3F8A /* MainScene.sks */,
+				DDFF53741D3455EC00064C5D /* Main.storyboard */,
+				DDFF53771D3455EC00064C5D /* Assets.xcassets */,
+				DDFF53791D3455EC00064C5D /* LaunchScreen.storyboard */,
+				DDFF537C1D3455EC00064C5D /* Info.plist */,
+			);
+			path = "Take Me Home";
+			sourceTree = "<group>";
+		};
+		DDFF53841D3455EC00064C5D /* Take Me HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDFF53851D3455EC00064C5D /* Take_Me_HomeTests.swift */,
+				DDFF53871D3455EC00064C5D /* Info.plist */,
+			);
+			path = "Take Me HomeTests";
+			sourceTree = "<group>";
+		};
+		DDFF538F1D3455EC00064C5D /* Take Me HomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DDFF53901D3455EC00064C5D /* Take_Me_HomeUITests.swift */,
+				DDFF53921D3455EC00064C5D /* Info.plist */,
+			);
+			path = "Take Me HomeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDFF53681D3455EC00064C5D /* Take Me Home */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDFF53951D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me Home" */;
+			buildPhases = (
+				DDFF53651D3455EC00064C5D /* Sources */,
+				DDFF53661D3455EC00064C5D /* Frameworks */,
+				DDFF53671D3455EC00064C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Take Me Home";
+			productName = "Take Me Home";
+			productReference = DDFF53691D3455EC00064C5D /* Take Me Home.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DDFF53801D3455EC00064C5D /* Take Me HomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDFF53981D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me HomeTests" */;
+			buildPhases = (
+				DDFF537D1D3455EC00064C5D /* Sources */,
+				DDFF537E1D3455EC00064C5D /* Frameworks */,
+				DDFF537F1D3455EC00064C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDFF53831D3455EC00064C5D /* PBXTargetDependency */,
+			);
+			name = "Take Me HomeTests";
+			productName = "Take Me HomeTests";
+			productReference = DDFF53811D3455EC00064C5D /* Take Me HomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DDFF538B1D3455EC00064C5D /* Take Me HomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDFF539B1D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me HomeUITests" */;
+			buildPhases = (
+				DDFF53881D3455EC00064C5D /* Sources */,
+				DDFF53891D3455EC00064C5D /* Frameworks */,
+				DDFF538A1D3455EC00064C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDFF538E1D3455EC00064C5D /* PBXTargetDependency */,
+			);
+			name = "Take Me HomeUITests";
+			productName = "Take Me HomeUITests";
+			productReference = DDFF538C1D3455EC00064C5D /* Take Me HomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DDFF53611D3455EC00064C5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jorge Avelar";
+				TargetAttributes = {
+					DDFF53681D3455EC00064C5D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = URG6LQYSNG;
+					};
+					DDFF53801D3455EC00064C5D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DDFF53681D3455EC00064C5D;
+					};
+					DDFF538B1D3455EC00064C5D = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DDFF53681D3455EC00064C5D;
+					};
+				};
+			};
+			buildConfigurationList = DDFF53641D3455EC00064C5D /* Build configuration list for PBXProject "Take Me Home" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DDFF53601D3455EB00064C5D;
+			productRefGroup = DDFF536A1D3455EC00064C5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DDFF53681D3455EC00064C5D /* Take Me Home */,
+				DDFF53801D3455EC00064C5D /* Take Me HomeTests */,
+				DDFF538B1D3455EC00064C5D /* Take Me HomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DDFF53671D3455EC00064C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDFF537B1D3455EC00064C5D /* LaunchScreen.storyboard in Resources */,
+				DDA0BD441D47DF73004798CC /* backgroundMusic.mp3 in Resources */,
+				DDA0BD4A1D481128004798CC /* explosion.mp3 in Resources */,
+				DD062C8F1D35A8D1008BE51B /* Stars.sks in Resources */,
+				DD5F92C81D3D46DC00162834 /* Eurostile in Resources */,
+				DD0E16231D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf in Resources */,
+				DDFF53781D3455EC00064C5D /* Assets.xcassets in Resources */,
+				DDA0BD4C1D48163C004798CC /* asteroidExplosion.mp3 in Resources */,
+				DD5F92D21D3D82EF00162834 /* smoke.sks in Resources */,
+				DD0B761F1D3ECBEC00FF7F81 /* GameScene.sks in Resources */,
+				DD50A60A1D36FB1000E85E7F /* healthUpPoof.sks in Resources */,
+				DDC5B2F41D40362D00CD66B8 /* cs_regular.ttf in Resources */,
+				DD06B0E71D42DAB7007374B6 /* InsaneModeScene.sks in Resources */,
+				DD6F59071D3EA41700DA69A0 /* Futura.ttc in Resources */,
+				DDFF53761D3455EC00064C5D /* Main.storyboard in Resources */,
+				DDA0BD461D47E4F2004798CC /* healthUpSound.mp3 in Resources */,
+				DD0214901D346867001D3F8A /* MainScene.sks in Resources */,
+				DD4759E51D37F61C009F2860 /* asteroidPoof.sks in Resources */,
+				DD5F92CC1D3D70AB00162834 /* explosion.sks in Resources */,
+				DD4522A71D3FFED900FBA8F5 /* mainBackground.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDFF537F1D3455EC00064C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDFF538A1D3455EC00064C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DDFF53651D3455EC00064C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD06B0E51D42DA43007374B6 /* InsaneModeScene.swift in Sources */,
+				DDFF53711D3455EC00064C5D /* GameScene.swift in Sources */,
+				DDFF53731D3455EC00064C5D /* GameViewController.swift in Sources */,
+				DDFF539F1D3456FC00064C5D /* MainScene.swift in Sources */,
+				DDFF536D1D3455EC00064C5D /* AppDelegate.swift in Sources */,
+				DDA0BD4E1D48253C004798CC /* SKTAudio.swift in Sources */,
+				DDFF53A11D345C3F00064C5D /* MSButtonNode.swift in Sources */,
+				DDFF53A81D34623300064C5D /* MSReferenceNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDFF537D1D3455EC00064C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDFF53861D3455EC00064C5D /* Take_Me_HomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDFF53881D3455EC00064C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDFF53911D3455EC00064C5D /* Take_Me_HomeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDFF53831D3455EC00064C5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDFF53681D3455EC00064C5D /* Take Me Home */;
+			targetProxy = DDFF53821D3455EC00064C5D /* PBXContainerItemProxy */;
+		};
+		DDFF538E1D3455EC00064C5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDFF53681D3455EC00064C5D /* Take Me Home */;
+			targetProxy = DDFF538D1D3455EC00064C5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DDFF53741D3455EC00064C5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDFF53751D3455EC00064C5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DDFF53791D3455EC00064C5D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDFF537A1D3455EC00064C5D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DDFF53931D3455EC00064C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDFF53941D3455EC00064C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DDFF53961D3455EC00064C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Take Me Home/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-Home";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		DDFF53971D3455EC00064C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Take Me Home/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-Home";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		DDFF53991D3455EC00064C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Take Me HomeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-HomeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Take Me Home.app/Take Me Home";
+			};
+			name = Debug;
+		};
+		DDFF539A1D3455EC00064C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Take Me HomeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-HomeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Take Me Home.app/Take Me Home";
+			};
+			name = Release;
+		};
+		DDFF539C1D3455EC00064C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Take Me HomeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-HomeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Take Me Home";
+			};
+			name = Debug;
+		};
+		DDFF539D1D3455EC00064C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Take Me HomeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-HomeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Take Me Home";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DDFF53641D3455EC00064C5D /* Build configuration list for PBXProject "Take Me Home" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDFF53931D3455EC00064C5D /* Debug */,
+				DDFF53941D3455EC00064C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDFF53951D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me Home" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDFF53961D3455EC00064C5D /* Debug */,
+				DDFF53971D3455EC00064C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDFF53981D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me HomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDFF53991D3455EC00064C5D /* Debug */,
+				DDFF539A1D3455EC00064C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDFF539B1D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me HomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDFF539C1D3455EC00064C5D /* Debug */,
+				DDFF539D1D3455EC00064C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DDFF53611D3455EC00064C5D /* Project object */;
+}
