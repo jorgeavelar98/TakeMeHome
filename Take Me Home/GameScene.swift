@@ -8,11 +8,17 @@
 
 import SpriteKit
 
+
+
+// MARK: - GameState Enum
 //Tracking enum for game state
 enum GameState {
     case Ready, Playing, GameOver
 }
 
+
+
+// MARK: - Physics Categories
 
 struct PhysicsCategory{
     static let None:         UInt32 = 0        //000000
@@ -20,12 +26,16 @@ struct PhysicsCategory{
     static let Asteroid:     UInt32 = 0b10     //000010
     static let HealthUp:     UInt32 = 0b100    //000100
     static let ShootPowerUp: UInt32 = 0b1000   //001000
-    static let bullets:      UInt32 = 0b1001   //001001
+    static let bullets:      UInt32 = 0b10000   //001000
+    // 001 or 010 = 011
 }
+
+
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     //Game management
     
+    // MARK: - Properties
     
     var state: GameState = .Ready
     
@@ -68,7 +78,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var nodeTouched = SKNode()
     var currentNodeTouched = SKNode()
     
-    var isFingerOnUfo = false
     var isFingerOnButton = false
     var canShootPowerUp = false
     
@@ -90,6 +99,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             life.xScale = lifeBar
         }
     }
+    
+    
+    
+    // MARK: - Utility Methods
     
     // The Asteroid
     func createAsteroids() {
@@ -249,28 +262,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setUpBullets() {
-        bullets = SKSpriteNode(imageNamed: "rocket")
-        bullets.xScale = 0.1
-        bullets.yScale = 0.1
-        bullets.zPosition = 1
+        let bullet = SKSpriteNode(imageNamed: "rocket")
+        bullet.xScale = 0.1
+        bullet.yScale = 0.1
+        bullet.zPosition = 1
         let position = ufo.position
-        bullets.position = position
+        bullet.position = position
         
         // bullets Physics
-        bullets.physicsBody = SKPhysicsBody(rectangleOfSize:(bullets.size))
-        bullets.physicsBody!.affectedByGravity = false
-        bullets.physicsBody!.dynamic = true
+        bullet.physicsBody = SKPhysicsBody(rectangleOfSize:(bullet.size))
+        bullet.physicsBody!.affectedByGravity = false
+        bullet.physicsBody!.dynamic = true
         
         // bullets will collide with nothing and contact only with asteroid
-        bullets.physicsBody!.categoryBitMask   = PhysicsCategory.bullets
-        bullets.physicsBody!.collisionBitMask  = PhysicsCategory.None
-        bullets.physicsBody!.contactTestBitMask = PhysicsCategory.Asteroid
+        bullet.physicsBody!.categoryBitMask   = PhysicsCategory.bullets
+        bullet.physicsBody!.collisionBitMask  = PhysicsCategory.None
+        bullet.physicsBody!.contactTestBitMask = PhysicsCategory.Asteroid
         
-        let action = SKAction.moveToX(self.size.width + 30, duration: 0.6)
+        let action = SKAction.moveToX(self.size.width + 30, duration: 2)
         let shotSoundEffect = SKAction.playSoundFileNamed("gunshot.mp3", waitForCompletion: false)
         let actionDone = SKAction.removeFromParent()
-        bullets.runAction(SKAction.sequence([shotSoundEffect, action, actionDone]))
-        addChild(bullets)
+        bullet.runAction(SKAction.sequence([shotSoundEffect, action, actionDone]))
+        
+        addChild(bullet)
 
     }
     
@@ -554,6 +568,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     
+    
+    // MARK: - Did Move to View!
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         
@@ -652,14 +669,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func hiddenControlButton() {
-        isFingerOnButton = true
-        isFingerOnUfo = false
-        if isFingerOnUfo && isFingerOnButton {
-            controlButton.alpha = 0.2
-        }
-    }
-    
     func healthUpSoundEffect() {
         let sound = SKAction.playSoundFileNamed("healthUpSound", waitForCompletion: false)
         let remove = SKAction.removeFromParent()
@@ -685,6 +694,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     // willremove node if the var is called
+    
+    
+    
+    
+    // MARK: - Did Begin Contact
     
     var physicsObjectsToRemove = [SKNode]()
     
@@ -719,7 +733,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if collision == PhysicsCategory.HealthUp | PhysicsCategory.Player {
             //print("Player Hit HealthUp")
 
-            
             if contact.bodyA.node!.name == "healthUp" {
                 /* Increment Health */
                 lifeBar += 0.1
@@ -750,15 +763,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             
         } else if collision == PhysicsCategory.bullets | PhysicsCategory.Asteroid {
-            
+            print("Bullet hit Asteroid")
             if contact.bodyA.node!.name == "bullets" {
-                
                 physicsObjectsToRemove.append(contact.bodyA.node!)
-                self.removeActionForKey("actionB")
-            } else {
-                
                 physicsObjectsToRemove.append(contact.bodyB.node!)
-                self.removeActionForKey("actionB")
+               
+            } else {
+                physicsObjectsToRemove.append(contact.bodyA.node!)
+                physicsObjectsToRemove.append(contact.bodyB.node!)
+               
             }
             // no contact
         } else if collision == PhysicsCategory.Player | PhysicsCategory.None {
@@ -778,20 +791,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
         
-        
-        //when touching the ufo
-        let touch = touches.first
-        let location = touch!.locationInNode(self)
-        
-        let node = nodeAtPoint(location)
-        
-        
-        if canShootPowerUp == true {
-            setUpBullets()
-        }
-        
         // Game not ready to play
-        
         if state == .GameOver {
             return
         }
@@ -803,18 +803,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             scoreLabelCount()
         }
         
-        if node.name == "ufoName" {
-            print("Began touch on ufo")
-            isFingerOnUfo = true
-            let fadeAway = SKAction.fadeOutWithDuration(0.5)
-            let sequence = SKAction.sequence([fadeAway])
-            controlButton.runAction(sequence)
-        }
-        
-        if node.name == "buttonName" {
-            print("touched control button")
-            isFingerOnButton = true
-            controlButton.alpha = 0.5
+        //when touching the screen
+        for touch in touches {
+            let location = touch.locationInNode(self)
+            let node = nodeAtPoint(location)
+            
+            if node.name == "buttonName" && location.x > 0{
+                print("touched control button")
+                isFingerOnButton = true
+                controlButton.alpha = 0.5
+            }
+            
+            if canShootPowerUp {
+                if location.x < 0 {
+                    setUpBullets()
+                }
+            }
         }
     }
     
@@ -823,46 +827,51 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if state == .GameOver {return}
         
         //if touching ufo, it will be able to move up and down
-        if isFingerOnButton || isFingerOnUfo {
+        if isFingerOnButton {
             
             //update the position of the paddle depending on how the player moves their finger.
-            let touch = touches.first
-            let location = touch!.locationInNode(self)
-            let previousLocation = touch!.previousLocationInNode(self)
+            for touch in touches{
+                let location = touch.locationInNode(self)
+                let previousLocation = touch.previousLocationInNode(self)
             
-            //Take the current position and add the difference between the new and the previous touch locations.
-            var ufoY = ufo.position.y + (location.y - previousLocation.y)
-            var buttonY = controlButton.position.y + (location.y - previousLocation.y)
-            //Before repositioning the paddle, limit the position so that the paddle will not go off the screen to the left or right
-            ufoY = max(ufoY, ufo.size.height/2)
-            ufoY = min(ufoY, size.width - ufo.size.height/2)
+                if location.x > 0 {
+                    //Take the current position and add the difference between the new and the previous touch locations.
+                    var ufoY = ufo.position.y + (location.y - previousLocation.y)
+                    var buttonY = controlButton.position.y + (location.y - previousLocation.y)
+                    //Before repositioning the paddle, limit the position so that the paddle will not go off the screen to the left or right
+                    ufoY = max(ufoY, ufo.size.height/2)
+                    ufoY = min(ufoY, size.width - ufo.size.height/2)
             
-            buttonY = max(buttonY, controlButton.size.height/2)
-            buttonY = min(buttonY, size.width - controlButton.size.height/2)
+                    buttonY = max(buttonY, controlButton.size.height/2)
+                    buttonY = min(buttonY, size.width - controlButton.size.height/2)
             
-            //move ufo based on touch location
-            ufoY = location.y
-            ufo.position.y = location.y
+                    //move ufo based on touch location
+                    ufoY = location.y
+                    ufo.position.y = location.y
             
-            buttonY = location.y
-            controlButton.position.y = location.y
+                    buttonY = location.y
+                    controlButton.position.y = location.y
+                }
             
-            
+            }
         }
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        // when no longer touching ufo
-        isFingerOnUfo = false
-        print("No longer touching UFO")
-        controlButton.alpha = 0
-        let fadeIn = SKAction.fadeInWithDuration(0.3)
-        let sequence = SKAction.sequence([fadeIn])
-        controlButton.runAction(sequence)
-        isFingerOnButton = false
-        print("No longer touching button")
-        controlButton.alpha = 1
+
+        // when no longer touching control button
+        for touch in touches{
+            let location = touch.locationInNode(self)
+            let node = self.nodeAtPoint(location)
+        
+            if node.name == "controlButton" {
+            isFingerOnButton = false
+            print("No longer touching button")
+            controlButton.alpha = 1
+            }
+        }
+
     }
     
     

@@ -117,7 +117,7 @@ class MainScene: SKScene {
             scene.scaleMode = .AspectFit
             
             /* Show debug */
-            skView.showsPhysics = false
+            skView.showsPhysics = true
             skView.showsDrawCount = false
             skView.showsFPS = false
             skView.showsNodeCount = false
