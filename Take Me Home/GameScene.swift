@@ -53,6 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //emmiters
     var explosion = SKEmitterNode()
+    var boom = SKEmitterNode()
     var smoke = SKEmitterNode()
     var starsBackground = SKEmitterNode()
     
@@ -68,6 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var healthUpSound = SKAudioNode()
     var asteroidSound = SKAudioNode()
     var gameOverDeath = SKAudioNode()
+    var shootPowerUpSound  = SKAudioNode()
     
     //MSButtonNode
     var restartButton = MSButtonNode(imageNamed: "restartButton")
@@ -684,13 +686,54 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func aststeroidSoundEffect() {
-        let sound = SKAction.playSoundFileNamed("asteroidExplosion", waitForCompletion: false)
+        let sound = SKAction.playSoundFileNamed("blast (1)", waitForCompletion: false)
         let remove = SKAction.removeFromParent()
         let sequence  = SKAction.sequence([sound, remove])
         asteroidSound.runAction(sequence)
         addChild(asteroidSound)
+        
+            }
+    
+    func ufoCrashEffect() {
+        let color = SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 0.3, duration: 0.1)
+        let normalColor = SKAction.colorizeWithColor(UIColor.whiteColor(), colorBlendFactor: 1.0, duration: 0.05)
+        let pushback = SKAction.moveToX(view!.frame.size.width / 10 + -255, duration: 0.1)
+        let goBack = SKAction.moveToX(view!.frame.size.width / 10 + -240, duration: 0.1)
+        let normal = SKAction.moveToX(view!.frame.size.width / 10 + -250, duration: 0.1)
+        let seq = SKAction.sequence([pushback, color, goBack, normal, normalColor])
+        
+        if lifeBar >= 0.05 {
+            ufo.runAction(seq)
+        } else {
+            ufo.runAction(SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 0.50))
+        }
+
     }
     
+    func shootPowerUpSoundEffect () {
+        let sound = SKAction.playSoundFileNamed("powerUpNoise", waitForCompletion: false)
+        let wait = SKAction.waitForDuration(0.3)
+        let sound2 = SKAction.playSoundFileNamed("gunReload", waitForCompletion: false)
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([sound, wait, sound2, remove])
+        shootPowerUpSound.runAction(sequence)
+        addChild(shootPowerUpSound)
+        
+    }
+    
+    func bulletAsteroidPoof(point: CGPoint) {
+        if let boom = SKEmitterNode(fileNamed: "boom") {
+            boom.position = point
+            addChild(boom)
+            let fadeAway = SKAction.fadeOutWithDuration(0.5)
+            let wait = SKAction.waitForDuration(0.5)
+            let remove = SKAction.removeFromParent()
+            let seq = SKAction.sequence([wait, fadeAway, wait, remove])
+            boom.runAction(seq)
+            
+        }
+
+    }
     func gameOverDeathSoundEffect() {
         let sound = SKAction.playSoundFileNamed("explosion", waitForCompletion: true)
         let remove = SKAction.removeFromParent()
@@ -699,11 +742,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(gameOverDeath)
     }
     
-    // willremove node if the var is called
-    
-    
-    
-    
+   
     // MARK: - Did Begin Contact
     
     var physicsObjectsToRemove = [SKNode]()
@@ -723,12 +762,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if contact.bodyA.node!.name == "asteroid" {
                 // decrease health
                 lifeBar -= 0.3
+                ufoCrashEffect()
                 aststeroidSoundEffect()
                 makeAsteroidPoofAtPoint(contact.bodyA.node!.position)
                 physicsObjectsToRemove.append(contact.bodyA.node!)
             } else {
                 // decrease health
                 lifeBar -= 0.3
+                ufoCrashEffect()
                 aststeroidSoundEffect()
                 makeAsteroidPoofAtPoint(contact.bodyB.node!.position)
                 physicsObjectsToRemove.append(contact.bodyB.node!)
@@ -757,12 +798,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if collision == PhysicsCategory.ShootPowerUp | PhysicsCategory.Player {
             
             if contact.bodyA.node!.name == "shootPowerUp" {
-               
+                shootPowerUpSoundEffect()
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 canShootPowerUp = true
                 self.removeActionForKey("actionB")
             } else {
-        
+                shootPowerUpSoundEffect()
                 physicsObjectsToRemove.append(contact.bodyB.node!)
                 canShootPowerUp = true
                 self.removeActionForKey("actionB")
@@ -773,11 +814,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if contact.bodyA.node!.name == "bullets" {
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 physicsObjectsToRemove.append(contact.bodyB.node!)
-               
+                aststeroidSoundEffect()
+                bulletAsteroidPoof(contact.bodyA.node!.position)
             } else {
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 physicsObjectsToRemove.append(contact.bodyB.node!)
-               
+                aststeroidSoundEffect()
+                bulletAsteroidPoof(contact.bodyB.node!.position)
             }
             // no contact
         } else if collision == PhysicsCategory.Player | PhysicsCategory.None {

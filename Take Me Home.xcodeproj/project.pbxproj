@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DD0214901D346867001D3F8A /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD02148F1D346867001D3F8A /* MainScene.sks */; };
+		DD04ED111D510D1F00FC2D8C /* gunReload.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED101D510D1F00FC2D8C /* gunReload.mp3 */; };
+		DD04ED131D510EF100FC2D8C /* powerUpNoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED121D510EF100FC2D8C /* powerUpNoise.mp3 */; };
+		DD04ED151D5142E400FC2D8C /* asteroidExplosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED141D5142E400FC2D8C /* asteroidExplosion.mp3 */; };
+		DD04ED171D5147C300FC2D8C /* blast (1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED161D5147C300FC2D8C /* blast (1).mp3 */; };
+		DD04ED1A1D51499D00FC2D8C /* boom.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED181D51499D00FC2D8C /* boom.sks */; };
+		DD04ED1B1D51499D00FC2D8C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED191D51499D00FC2D8C /* spark.png */; };
 		DD062C8F1D35A8D1008BE51B /* Stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD062C8D1D35A8D1008BE51B /* Stars.sks */; };
 		DD06B0E51D42DA43007374B6 /* InsaneModeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */; };
 		DD06B0E71D42DAB7007374B6 /* InsaneModeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */; };
@@ -24,7 +30,6 @@
 		DDA0BD441D47DF73004798CC /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */; };
 		DDA0BD461D47E4F2004798CC /* healthUpSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */; };
 		DDA0BD4A1D481128004798CC /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD491D481128004798CC /* explosion.mp3 */; };
-		DDA0BD4C1D48163C004798CC /* asteroidExplosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */; };
 		DDA0BD4E1D48253C004798CC /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA0BD4D1D48253C004798CC /* SKTAudio.swift */; };
 		DDC5B2F41D40362D00CD66B8 /* cs_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDC5B2F31D40362D00CD66B8 /* cs_regular.ttf */; };
 		DDFF536D1D3455EC00064C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF536C1D3455EC00064C5D /* AppDelegate.swift */; };
@@ -59,6 +64,12 @@
 
 /* Begin PBXFileReference section */
 		DD02148F1D346867001D3F8A /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
+		DD04ED101D510D1F00FC2D8C /* gunReload.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gunReload.mp3; sourceTree = "<group>"; };
+		DD04ED121D510EF100FC2D8C /* powerUpNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = powerUpNoise.mp3; sourceTree = "<group>"; };
+		DD04ED141D5142E400FC2D8C /* asteroidExplosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asteroidExplosion.mp3; sourceTree = "<group>"; };
+		DD04ED161D5147C300FC2D8C /* blast (1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "blast (1).mp3"; sourceTree = "<group>"; };
+		DD04ED181D51499D00FC2D8C /* boom.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = boom.sks; sourceTree = "<group>"; };
+		DD04ED191D51499D00FC2D8C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		DD062C8D1D35A8D1008BE51B /* Stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Stars.sks; path = ../Stars.sks; sourceTree = "<group>"; };
 		DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsaneModeScene.swift; sourceTree = "<group>"; };
 		DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = InsaneModeScene.sks; path = ../InsaneModeScene.sks; sourceTree = "<group>"; };
@@ -75,7 +86,6 @@
 		DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = healthUpSound.mp3; sourceTree = "<group>"; };
 		DDA0BD491D481128004798CC /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
-		DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asteroidExplosion.mp3; sourceTree = "<group>"; };
 		DDA0BD4D1D48253C004798CC /* SKTAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		DDC5B2F31D40362D00CD66B8 /* cs_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cs_regular.ttf; sourceTree = "<group>"; };
 		DDFF53691D3455EC00064C5D /* Take Me Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Take Me Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,8 +137,13 @@
 			children = (
 				DD0E0BCB1D50149C002082C3 /* Machine Gun Shooting.mp3 */,
 				DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */,
+				DD04ED101D510D1F00FC2D8C /* gunReload.mp3 */,
+				DD04ED121D510EF100FC2D8C /* powerUpNoise.mp3 */,
 				DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */,
-				DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */,
+				DD04ED141D5142E400FC2D8C /* asteroidExplosion.mp3 */,
+				DD04ED181D51499D00FC2D8C /* boom.sks */,
+				DD04ED191D51499D00FC2D8C /* spark.png */,
+				DD04ED161D5147C300FC2D8C /* blast (1).mp3 */,
 				DDA0BD491D481128004798CC /* explosion.mp3 */,
 				DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */,
 				DD5F92CB1D3D70AB00162834 /* explosion.sks */,
@@ -310,17 +325,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD04ED111D510D1F00FC2D8C /* gunReload.mp3 in Resources */,
 				DDFF537B1D3455EC00064C5D /* LaunchScreen.storyboard in Resources */,
 				DDA0BD441D47DF73004798CC /* backgroundMusic.mp3 in Resources */,
 				DDA0BD4A1D481128004798CC /* explosion.mp3 in Resources */,
 				DD062C8F1D35A8D1008BE51B /* Stars.sks in Resources */,
+				DD04ED1B1D51499D00FC2D8C /* spark.png in Resources */,
 				DD5F92C81D3D46DC00162834 /* Eurostile in Resources */,
 				DD0E16231D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf in Resources */,
 				DDFF53781D3455EC00064C5D /* Assets.xcassets in Resources */,
-				DDA0BD4C1D48163C004798CC /* asteroidExplosion.mp3 in Resources */,
 				DD5F92D21D3D82EF00162834 /* smoke.sks in Resources */,
 				DD0B761F1D3ECBEC00FF7F81 /* GameScene.sks in Resources */,
 				DD50A60A1D36FB1000E85E7F /* healthUpPoof.sks in Resources */,
+				DD04ED171D5147C300FC2D8C /* blast (1).mp3 in Resources */,
 				DDC5B2F41D40362D00CD66B8 /* cs_regular.ttf in Resources */,
 				DD06B0E71D42DAB7007374B6 /* InsaneModeScene.sks in Resources */,
 				DD6F59071D3EA41700DA69A0 /* Futura.ttc in Resources */,
@@ -331,6 +348,9 @@
 				DD5F92CC1D3D70AB00162834 /* explosion.sks in Resources */,
 				DD4522A71D3FFED900FBA8F5 /* mainBackground.sks in Resources */,
 				DD0E0BCC1D50149C002082C3 /* Machine Gun Shooting.mp3 in Resources */,
+				DD04ED151D5142E400FC2D8C /* asteroidExplosion.mp3 in Resources */,
+				DD04ED131D510EF100FC2D8C /* powerUpNoise.mp3 in Resources */,
+				DD04ED1A1D51499D00FC2D8C /* boom.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
