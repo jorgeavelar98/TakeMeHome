@@ -169,7 +169,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ufo.zPosition = 5
         ufo.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         ufo.position.x = view!.frame.size.width / 10 + -250
-        ufo.position.y = 0 // view!.frame.size.height / 6
+        print (ufo.position.x)
+        ufo.position.y = 0
         
         ufo.physicsBody = SKPhysicsBody(circleOfRadius: ufo.size.height/2)
         
@@ -280,11 +281,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bullet.physicsBody!.contactTestBitMask = PhysicsCategory.Asteroid
         
         let action = SKAction.moveToX(self.size.width + 30, duration: 2)
-        let shotSoundEffect = SKAction.playSoundFileNamed("gunshot.mp3", waitForCompletion: false)
+        let shotSoundEffect = SKAction.playSoundFileNamed("Machine Gun Shooting.mp3", waitForCompletion: false)
         let actionDone = SKAction.removeFromParent()
         bullet.runAction(SKAction.sequence([shotSoundEffect, action, actionDone]))
-        
         addChild(bullet)
+        
+        let pushback = SKAction.moveToX(view!.frame.size.width / 10 + -260, duration: 0.1)
+        let goBack = SKAction.moveToX(view!.frame.size.width / 10 + -250, duration: 0.1)
+        let seq = SKAction.sequence([pushback, goBack])
+        ufo.runAction(seq)
+        
 
     }
     

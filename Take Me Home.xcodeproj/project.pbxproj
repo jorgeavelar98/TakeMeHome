@@ -12,6 +12,7 @@
 		DD06B0E51D42DA43007374B6 /* InsaneModeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */; };
 		DD06B0E71D42DAB7007374B6 /* InsaneModeScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */; };
 		DD0B761F1D3ECBEC00FF7F81 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */; };
+		DD0E0BCC1D50149C002082C3 /* Machine Gun Shooting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0E0BCB1D50149C002082C3 /* Machine Gun Shooting.mp3 */; };
 		DD0E16231D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */; };
 		DD4522A71D3FFED900FBA8F5 /* mainBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */; };
 		DD4759E51D37F61C009F2860 /* asteroidPoof.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD4759E41D37F61C009F2860 /* asteroidPoof.sks */; };
@@ -62,6 +63,7 @@
 		DD06B0E41D42DA43007374B6 /* InsaneModeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsaneModeScene.swift; sourceTree = "<group>"; };
 		DD06B0E61D42DAB7007374B6 /* InsaneModeScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = InsaneModeScene.sks; path = ../InsaneModeScene.sks; sourceTree = "<group>"; };
 		DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		DD0E0BCB1D50149C002082C3 /* Machine Gun Shooting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Machine Gun Shooting.mp3"; sourceTree = "<group>"; };
 		DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
 		DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = mainBackground.sks; path = ../mainBackground.sks; sourceTree = "<group>"; };
 		DD4759E41D37F61C009F2860 /* asteroidPoof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = asteroidPoof.sks; path = ../asteroidPoof.sks; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		DD4522A51D3FFE1B00FBA8F5 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
+				DD0E0BCB1D50149C002082C3 /* Machine Gun Shooting.mp3 */,
 				DDA0BD431D47DF73004798CC /* backgroundMusic.mp3 */,
 				DDA0BD451D47E4F2004798CC /* healthUpSound.mp3 */,
 				DDA0BD4B1D48163C004798CC /* asteroidExplosion.mp3 */,
@@ -327,6 +330,7 @@
 				DD4759E51D37F61C009F2860 /* asteroidPoof.sks in Resources */,
 				DD5F92CC1D3D70AB00162834 /* explosion.sks in Resources */,
 				DD4522A71D3FFED900FBA8F5 /* mainBackground.sks in Resources */,
+				DD0E0BCC1D50149C002082C3 /* Machine Gun Shooting.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
