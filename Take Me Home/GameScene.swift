@@ -679,20 +679,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func healthUpSoundEffect() {
         let sound = SKAction.playSoundFileNamed("healthUpSound", waitForCompletion: false)
-        let remove = SKAction.removeFromParent()
-        let sequence  = SKAction.sequence([sound, remove])
-        healthUpSound.runAction(sequence)
-        addChild(healthUpSound)
+        healthUpSound.runAction(sound)
     }
     
     func aststeroidSoundEffect() {
         let sound = SKAction.playSoundFileNamed("blast (1)", waitForCompletion: false)
-        let remove = SKAction.removeFromParent()
-        let sequence  = SKAction.sequence([sound, remove])
-        asteroidSound.runAction(sequence)
-        addChild(asteroidSound)
-        
-            }
+        asteroidSound.runAction(sound)
+    }
     
     func ufoCrashEffect() {
         let color = SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 0.3, duration: 0.1)
