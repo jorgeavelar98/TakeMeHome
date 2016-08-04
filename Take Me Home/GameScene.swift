@@ -83,6 +83,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isFingerOnButton = false
     var canShootPowerUp = false
     
+    
     var score: Int = 0 {
         didSet {
             scoreLabel.text = String(score)
@@ -306,13 +307,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bulletCountLabel.text  = ("20")
         bulletCountLabel.zPosition = 5
         bulletCountLabel.removeFromParent()
+        
+        let fadeIn = SKAction.fadeInWithDuration(0.2)
+        bulletCountLabel.runAction(fadeIn)
         addChild(bulletCountLabel)
-    }
-    
-    func setUpStartBulletCount() {
-        if scoreLabel == 0{
-            canShootPowerUp = false
-        }
     }
     
     // this is the lifeBar in the game
@@ -384,7 +382,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let repeatShootPowerUps = SKAction.repeatActionForever(shootPowerUpsSequence)
         
         self.runAction(repeatShootPowerUps, withKey: "actionB")
-
     }
     
     func setUpControlButton() {
@@ -635,7 +632,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setUpArrows()
         instructionsCircle()
         setUpScoreLabel()
-        setUpStartBulletCount()
     }
     
    
@@ -720,7 +716,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let normal = SKAction.moveToX(view!.frame.size.width / 10 + -250, duration: 0.1)
         let seq = SKAction.sequence([pushback, color, goBack, normal, normalColor])
         
-        if lifeBar >= 0.05 {
+        if lifeBar >= 0.01 {
             ufo.runAction(seq)
         } else {
             ufo.runAction(SKAction.colorizeWithColor(UIColor.redColor(), colorBlendFactor: 1.0, duration: 0.50))
@@ -817,14 +813,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if contact.bodyA.node!.name == "shootPowerUp" {
                 shootPowerUpSoundEffect()
+                setUpBulletCount()
+                bulletCount = 20
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 canShootPowerUp = true
-                self.removeActionForKey("actionB")
+                
+                if let action = self.actionForKey("actionB") {
+                    action.speed = 0
+                }
             } else {
                 shootPowerUpSoundEffect()
+                setUpBulletCount()
+                bulletCount = 20
                 physicsObjectsToRemove.append(contact.bodyB.node!)
                 canShootPowerUp = true
-                self.removeActionForKey("actionB")
+                
+                if let action = self.actionForKey("actionB") {
+                    action.speed = 0
+                }
             }
             
         } else if collision == PhysicsCategory.bullets | PhysicsCategory.Asteroid {
@@ -884,7 +890,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if canShootPowerUp {
                 if location.x < 0 {
                     setUpBullets()
-                    setUpBulletCount()
                     bulletCount -= 1
                 }
             }
@@ -951,6 +956,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         lifeBar -= 0.0005
     }
     
+    func setUpEndBulletCount() {
+        if bulletCount == 0{
+            canShootPowerUp = false
+            if let action = self.actionForKey("actionB") {
+                action.speed = 1
+            }
+            let fade = SKAction.fadeOutWithDuration(0.2)
+            bulletCountLabel.runAction(fade)
+        }
+    }
+    
     
     func gameOver() {
         /* Game over! */
@@ -994,6 +1010,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // decreases life little by little
         updateLife()
+        setUpEndBulletCount()
         
         /* Has the player ran out of health? */
         if lifeBar == 0 {
