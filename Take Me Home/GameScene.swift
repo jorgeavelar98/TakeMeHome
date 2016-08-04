@@ -21,13 +21,12 @@ enum GameState {
 // MARK: - Physics Categories
 
 struct PhysicsCategory{
-    static let None:         UInt32 = 0        //000000
-    static let Player:       UInt32 = 0b1      //000001
-    static let Asteroid:     UInt32 = 0b10     //000010
-    static let HealthUp:     UInt32 = 0b100    //000100
-    static let ShootPowerUp: UInt32 = 0b1000   //001000
-    static let bullets:      UInt32 = 0b10000   //001000
-    // 001 or 010 = 011
+    static let None:         UInt32 = 0
+    static let Player:       UInt32 = 0b1
+    static let Asteroid:     UInt32 = 0b10
+    static let HealthUp:     UInt32 = 0b100
+    static let ShootPowerUp: UInt32 = 0b1000
+    static let bullets:      UInt32 = 0b10000
 }
 
 
@@ -64,6 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var startLabel2 = SKLabelNode(fontNamed: "Counter-Strike")
     var startLabel3 = SKLabelNode(fontNamed: "Counter-Strike")
     var startLabel4 = SKLabelNode(fontNamed: "Counter-Strike")
+    var bulletCountLabel = SKLabelNode(fontNamed: "Counter-Strike")
     var gameOverLabel = SKLabelNode(fontNamed: "Counter-Strike")
     
     var healthUpSound = SKAudioNode()
@@ -99,6 +99,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Life between 0.0 -> 1.0 aka 100%
             life.xScale = lifeBar
+        }
+    }
+    
+    var bulletCount: Int = 20 {
+        didSet {
+            bulletCountLabel.text = String(bulletCount)
         }
     }
     
@@ -292,8 +298,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let goBack = SKAction.moveToX(view!.frame.size.width / 10 + -250, duration: 0.1)
         let seq = SKAction.sequence([pushback, goBack])
         ufo.runAction(seq)
-        
-
+    }
+    
+    func setUpBulletCount() {
+        bulletCountLabel.position = CGPoint(x: 0, y: 80)
+        bulletCountLabel.fontSize = 48
+        bulletCountLabel.text  = ("20")
+        bulletCountLabel.zPosition = 5
+        bulletCountLabel.removeFromParent()
+        addChild(bulletCountLabel)
+    }
+    
+    func setUpStartBulletCount() {
+        if scoreLabel == 0{
+            canShootPowerUp = false
+        }
     }
     
     // this is the lifeBar in the game
@@ -574,6 +593,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
       highScoreLabel.text = "High Score: " + NSUserDefaults().integerForKey("highscore").description
     }
+    
 
     
     
@@ -615,6 +635,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         setUpArrows()
         instructionsCircle()
         setUpScoreLabel()
+        setUpStartBulletCount()
     }
     
    
@@ -680,11 +701,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func healthUpSoundEffect() {
         let sound = SKAction.playSoundFileNamed("healthUpSound", waitForCompletion: false)
         healthUpSound.runAction(sound)
+        healthUpSound.removeFromParent()
+        addChild(healthUpSound)
     }
     
     func aststeroidSoundEffect() {
         let sound = SKAction.playSoundFileNamed("blast (1)", waitForCompletion: false)
         asteroidSound.runAction(sound)
+        asteroidSound.removeFromParent()
+        addChild(asteroidSound)
     }
     
     func ufoCrashEffect() {
@@ -859,6 +884,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if canShootPowerUp {
                 if location.x < 0 {
                     setUpBullets()
+                    setUpBulletCount()
+                    bulletCount -= 1
                 }
             }
         }
