@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AC8A3C76A837B286D9F86416737435E /* Pods-Take Me HomeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22FEB5309E2AB2DB8E68EDAFED8A22BE /* Pods-Take Me HomeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		269E934D3F9BE112B51EC33DA8E68980 /* Pods-Take Me Home-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0C5521DB28104BF38D18ECD566133 /* Pods-Take Me Home-dummy.m */; };
+		44DDC9B46DC78C6AAB8C266243C15BF0 /* Pods-Take Me HomeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE5BCF78E8E0ACA4FEA30C36544730D /* Pods-Take Me HomeUITests-dummy.m */; };
+		5228B0313BB5871AF3D7FA9555266A0F /* Pods-Take Me Home-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E4764EA78A16E82B05C4A8F49C5852E /* Pods-Take Me Home-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5546B42872CE6E1B3CB779ACC62B468C /* Pods-Take Me HomeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCBE2D62E3BB5B3B8E43C3732B7A3402 /* Pods-Take Me HomeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77B02D4CA45B4A8AE6D745BAD7D19D72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		7EF77D25D5E72803D04D2DD38AB0A7F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		80C773D2E69715EE903FB6AD436F1B49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B1071C1751B97104F052210D5B64EA06 /* Pods-Take Me HomeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF4ED8B192A650EED38C9E591464B7B /* Pods-Take Me HomeTests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01EA2D56C52DB0DD4F51D0291AD0801D /* Pods-Take Me Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Take Me Home.release.xcconfig"; sourceTree = "<group>"; };
+		02590475E9F867EA9CC4E2347797D89E /* Pods_Take_Me_HomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Me_HomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0780E961F65EE6B671558E7786068071 /* Pods-Take Me Home-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Take Me Home-resources.sh"; sourceTree = "<group>"; };
+		089DF64A4209F0D0C8D9BB905D462CDE /* Pods-Take Me HomeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Take Me HomeUITests.modulemap"; sourceTree = "<group>"; };
+		0E12C4C0DA63BBBD6BFAFDF2C25A32C9 /* Pods-Take Me HomeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Take Me HomeTests-resources.sh"; sourceTree = "<group>"; };
+		0E2F1AE28508BE96F6DC55FE57310DCD /* Pods-Take Me Home-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Take Me Home-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1CD0C5521DB28104BF38D18ECD566133 /* Pods-Take Me Home-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Take Me Home-dummy.m"; sourceTree = "<group>"; };
+		219603845216F3E24B767B2A50F80DBE /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		22FEB5309E2AB2DB8E68EDAFED8A22BE /* Pods-Take Me HomeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Take Me HomeTests-umbrella.h"; sourceTree = "<group>"; };
+		390A5FEEB6489E5DBC67D0F12B00FF79 /* Pods-Take Me Home.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Take Me Home.modulemap"; sourceTree = "<group>"; };
+		4D85ED2A288CF61E21019F9720657924 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
+		4DA2BBB540E1951752DE41D78FBC2FE6 /* Pods-Take Me HomeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Take Me HomeTests-frameworks.sh"; sourceTree = "<group>"; };
+		5E4764EA78A16E82B05C4A8F49C5852E /* Pods-Take Me Home-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Take Me Home-umbrella.h"; sourceTree = "<group>"; };
+		632917EAC660AF9FEE6E0E50FA7E46FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71705832E7971623E95AF12C45AE3502 /* Pods-Take Me HomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Take Me HomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		78AA5DF552E6422D8F195E1E35FDF1B5 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		7BC6FB5E15E6323BE8C10D7ABF952E9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D05A29047484C37E6EC9889022DA60E /* Pods_Take_Me_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Me_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E85E335BACEAA9394B13345BE08A6AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EA110F9625ECA2660EC817E9454060 /* Pods-Take Me HomeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Take Me HomeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8777E13233E375B59C57AD567495E503 /* Pods-Take Me HomeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Take Me HomeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8942CF00D24745C404EF3D83B4958B2C /* Pods-Take Me HomeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Take Me HomeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8ACF294A837ABCDF2A90609B875191E2 /* Pods-Take Me HomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Take Me HomeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8B20081D6C01A6AEE8428BD5A5B65DCF /* Pods-Take Me HomeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Take Me HomeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9924C478DD62E284EC2FD4B546E594BD /* Pods-Take Me HomeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Take Me HomeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A44F36003E2671EFAC83C427ED0D3831 /* Pods_Take_Me_HomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Me_HomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A898FC0BDDD9FCD604DF8151357B95EF /* Pods-Take Me Home-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Take Me Home-frameworks.sh"; sourceTree = "<group>"; };
+		AA37E40D051DBD8169B53BB5B66AE9C1 /* Pods-Take Me HomeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Take Me HomeTests.modulemap"; sourceTree = "<group>"; };
+		B8D7BED4C9EDECD6BE78312FC6D65A02 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		CE39B3994A2E4541A692C51EE874A3B9 /* Pods-Take Me HomeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Take Me HomeUITests-resources.sh"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D15EBCB75A30F2A92ACEF344D9F9E9F0 /* Pods-Take Me HomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Take Me HomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D76E93D963ED6D5B1E606C6FABA5B61F /* Pods-Take Me Home-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Take Me Home-acknowledgements.plist"; sourceTree = "<group>"; };
+		DCBE2D62E3BB5B3B8E43C3732B7A3402 /* Pods-Take Me HomeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Take Me HomeUITests-umbrella.h"; sourceTree = "<group>"; };
+		DF275361F137FFFAC95E10B9F0BAE4E5 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		E902D6A1780C90DA8D9775A9551AE680 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		EBE7060F9DB9DA5B6A193E7AB505E6FB /* Pods-Take Me HomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Take Me HomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		EDF4ED8B192A650EED38C9E591464B7B /* Pods-Take Me HomeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Take Me HomeTests-dummy.m"; sourceTree = "<group>"; };
+		FAF822D2C02C424982832435D7291DB1 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		FDE5BCF78E8E0ACA4FEA30C36544730D /* Pods-Take Me HomeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Take Me HomeUITests-dummy.m"; sourceTree = "<group>"; };
+		FE199C225DC9BE74C48418E274DB7C44 /* Pods-Take Me Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Take Me Home.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A6CF35992A9C80D198D1E6ECC85A1D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF77D25D5E72803D04D2DD38AB0A7F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		830CDBCA7FC74A0B7116EACFEB0B513A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B02D4CA45B4A8AE6D745BAD7D19D72 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6AFAC00E6947ABCF4CA7C1864E36210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C773D2E69715EE903FB6AD436F1B49 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		056B7FB4565C8F6CFBC262FDCD790C0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78AA5DF552E6422D8F195E1E35FDF1B5 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B8CEF19337FA4DFF56EC7EF36B16C09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E87E635A8BA23B6FDD7AFF5F5F24DCFC /* Firebase */,
+				17E963AC9EA7E429C37DA8FEEA72526B /* FirebaseAnalytics */,
+				76CC1C8D9CD798D689BCD05C98FE3EAD /* FirebaseInstanceID */,
+				AEFF8F1B6621E9AFD02CAB76FC73388F /* GoogleInterchangeUtilities */,
+				D227E2B6883501EB56EEE7DB33608B01 /* GoogleSymbolUtilities */,
+				1FE7E728519B8C441DC0979AF90877D4 /* GoogleUtilities */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		122442F85AC0EEF686F286D9DE35D0A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAF822D2C02C424982832435D7291DB1 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17E963AC9EA7E429C37DA8FEEA72526B /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				122442F85AC0EEF686F286D9DE35D0A1 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		1A4463875C273234EACF4D6AC9F695F5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8AEFB7FA003DDDCFE331924DB457B18 /* Pods-Take Me Home */,
+				AF17F2D230275E23C71B41163A36D1D2 /* Pods-Take Me HomeTests */,
+				38C9F558AA08781F83AE097C5FF22DBF /* Pods-Take Me HomeUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1FE7E728519B8C441DC0979AF90877D4 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A09B82FC34DC854CBB4A7D6B7C35C65 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		38C9F558AA08781F83AE097C5FF22DBF /* Pods-Take Me HomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				632917EAC660AF9FEE6E0E50FA7E46FF /* Info.plist */,
+				089DF64A4209F0D0C8D9BB905D462CDE /* Pods-Take Me HomeUITests.modulemap */,
+				8942CF00D24745C404EF3D83B4958B2C /* Pods-Take Me HomeUITests-acknowledgements.markdown */,
+				8777E13233E375B59C57AD567495E503 /* Pods-Take Me HomeUITests-acknowledgements.plist */,
+				FDE5BCF78E8E0ACA4FEA30C36544730D /* Pods-Take Me HomeUITests-dummy.m */,
+				8B20081D6C01A6AEE8428BD5A5B65DCF /* Pods-Take Me HomeUITests-frameworks.sh */,
+				CE39B3994A2E4541A692C51EE874A3B9 /* Pods-Take Me HomeUITests-resources.sh */,
+				DCBE2D62E3BB5B3B8E43C3732B7A3402 /* Pods-Take Me HomeUITests-umbrella.h */,
+				71705832E7971623E95AF12C45AE3502 /* Pods-Take Me HomeUITests.debug.xcconfig */,
+				8ACF294A837ABCDF2A90609B875191E2 /* Pods-Take Me HomeUITests.release.xcconfig */,
+			);
+			name = "Pods-Take Me HomeUITests";
+			path = "Target Support Files/Pods-Take Me HomeUITests";
+			sourceTree = "<group>";
+		};
+		3A09B82FC34DC854CBB4A7D6B7C35C65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF275361F137FFFAC95E10B9F0BAE4E5 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6E1E5C624A451F2216F2E980FA66DEE5 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				4D85ED2A288CF61E21019F9720657924 /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		6FF8BEBD4B336F1556D0507DDD7AE186 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8D7BED4C9EDECD6BE78312FC6D65A02 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76CC1C8D9CD798D689BCD05C98FE3EAD /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				E902D6A1780C90DA8D9775A9551AE680 /* FIRInstanceID.h */,
+				6FF8BEBD4B336F1556D0507DDD7AE186 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0B8CEF19337FA4DFF56EC7EF36B16C09 /* Pods */,
+				BEB00B626D577D8303C53FF1F1FCD631 /* Products */,
+				1A4463875C273234EACF4D6AC9F695F5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AEFF8F1B6621E9AFD02CAB76FC73388F /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				F38FA45BD3E1C0E58BF4D98B0F38646B /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		AF17F2D230275E23C71B41163A36D1D2 /* Pods-Take Me HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BC6FB5E15E6323BE8C10D7ABF952E9F /* Info.plist */,
+				AA37E40D051DBD8169B53BB5B66AE9C1 /* Pods-Take Me HomeTests.modulemap */,
+				9924C478DD62E284EC2FD4B546E594BD /* Pods-Take Me HomeTests-acknowledgements.markdown */,
+				81EA110F9625ECA2660EC817E9454060 /* Pods-Take Me HomeTests-acknowledgements.plist */,
+				EDF4ED8B192A650EED38C9E591464B7B /* Pods-Take Me HomeTests-dummy.m */,
+				4DA2BBB540E1951752DE41D78FBC2FE6 /* Pods-Take Me HomeTests-frameworks.sh */,
+				0E12C4C0DA63BBBD6BFAFDF2C25A32C9 /* Pods-Take Me HomeTests-resources.sh */,
+				22FEB5309E2AB2DB8E68EDAFED8A22BE /* Pods-Take Me HomeTests-umbrella.h */,
+				D15EBCB75A30F2A92ACEF344D9F9E9F0 /* Pods-Take Me HomeTests.debug.xcconfig */,
+				EBE7060F9DB9DA5B6A193E7AB505E6FB /* Pods-Take Me HomeTests.release.xcconfig */,
+			);
+			name = "Pods-Take Me HomeTests";
+			path = "Target Support Files/Pods-Take Me HomeTests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEB00B626D577D8303C53FF1F1FCD631 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D05A29047484C37E6EC9889022DA60E /* Pods_Take_Me_Home.framework */,
+				A44F36003E2671EFAC83C427ED0D3831 /* Pods_Take_Me_HomeTests.framework */,
+				02590475E9F867EA9CC4E2347797D89E /* Pods_Take_Me_HomeUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8AEFB7FA003DDDCFE331924DB457B18 /* Pods-Take Me Home */ = {
+			isa = PBXGroup;
+			children = (
+				7E85E335BACEAA9394B13345BE08A6AF /* Info.plist */,
+				390A5FEEB6489E5DBC67D0F12B00FF79 /* Pods-Take Me Home.modulemap */,
+				0E2F1AE28508BE96F6DC55FE57310DCD /* Pods-Take Me Home-acknowledgements.markdown */,
+				D76E93D963ED6D5B1E606C6FABA5B61F /* Pods-Take Me Home-acknowledgements.plist */,
+				1CD0C5521DB28104BF38D18ECD566133 /* Pods-Take Me Home-dummy.m */,
+				A898FC0BDDD9FCD604DF8151357B95EF /* Pods-Take Me Home-frameworks.sh */,
+				0780E961F65EE6B671558E7786068071 /* Pods-Take Me Home-resources.sh */,
+				5E4764EA78A16E82B05C4A8F49C5852E /* Pods-Take Me Home-umbrella.h */,
+				FE199C225DC9BE74C48418E274DB7C44 /* Pods-Take Me Home.debug.xcconfig */,
+				01EA2D56C52DB0DD4F51D0291AD0801D /* Pods-Take Me Home.release.xcconfig */,
+			);
+			name = "Pods-Take Me Home";
+			path = "Target Support Files/Pods-Take Me Home";
+			sourceTree = "<group>";
+		};
+		D227E2B6883501EB56EEE7DB33608B01 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				056B7FB4565C8F6CFBC262FDCD790C0C /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		E87E635A8BA23B6FDD7AFF5F5F24DCFC /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				6E1E5C624A451F2216F2E980FA66DEE5 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F38FA45BD3E1C0E58BF4D98B0F38646B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				219603845216F3E24B767B2A50F80DBE /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		75D49F5F781ADA283A50A8B381D04BC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC8A3C76A837B286D9F86416737435E /* Pods-Take Me HomeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B09B93A9C0B3E21B0A7E48CA7768958F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5228B0313BB5871AF3D7FA9555266A0F /* Pods-Take Me Home-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD842A4E7869861E6241C2E7A3315EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5546B42872CE6E1B3CB779ACC62B468C /* Pods-Take Me HomeUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9C165714E4612233CF689E8B0DA706F4 /* Pods-Take Me HomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB17DB2C33CCCA48D41E1ED32304A3B9 /* Build configuration list for PBXNativeTarget "Pods-Take Me HomeUITests" */;
+			buildPhases = (
+				0D1137FCE57F6305094AD93584D11301 /* Sources */,
+				830CDBCA7FC74A0B7116EACFEB0B513A /* Frameworks */,
+				FCD842A4E7869861E6241C2E7A3315EA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Take Me HomeUITests";
+			productName = "Pods-Take Me HomeUITests";
+			productReference = 02590475E9F867EA9CC4E2347797D89E /* Pods_Take_Me_HomeUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C453EFDA0842E3EE6E5846DCC380C7DF /* Pods-Take Me Home */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D7514556C022CEF7EAB7DE80DAD7B7 /* Build configuration list for PBXNativeTarget "Pods-Take Me Home" */;
+			buildPhases = (
+				283313CAA00E6D43094C51A474F01DA3 /* Sources */,
+				E6AFAC00E6947ABCF4CA7C1864E36210 /* Frameworks */,
+				B09B93A9C0B3E21B0A7E48CA7768958F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Take Me Home";
+			productName = "Pods-Take Me Home";
+			productReference = 7D05A29047484C37E6EC9889022DA60E /* Pods_Take_Me_Home.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8AE5A3D94D959D82D5DB8CD3E128AEE /* Pods-Take Me HomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 234D5C79A33F723E1BB83FECB58D3917 /* Build configuration list for PBXNativeTarget "Pods-Take Me HomeTests" */;
+			buildPhases = (
+				382948136ACF13936A2086E5FCB2DE74 /* Sources */,
+				5A6CF35992A9C80D198D1E6ECC85A1D7 /* Frameworks */,
+				75D49F5F781ADA283A50A8B381D04BC6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Take Me HomeTests";
+			productName = "Pods-Take Me HomeTests";
+			productReference = A44F36003E2671EFAC83C427ED0D3831 /* Pods_Take_Me_HomeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BEB00B626D577D8303C53FF1F1FCD631 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C453EFDA0842E3EE6E5846DCC380C7DF /* Pods-Take Me Home */,
+				C8AE5A3D94D959D82D5DB8CD3E128AEE /* Pods-Take Me HomeTests */,
+				9C165714E4612233CF689E8B0DA706F4 /* Pods-Take Me HomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D1137FCE57F6305094AD93584D11301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DDC9B46DC78C6AAB8C266243C15BF0 /* Pods-Take Me HomeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		283313CAA00E6D43094C51A474F01DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				269E934D3F9BE112B51EC33DA8E68980 /* Pods-Take Me Home-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		382948136ACF13936A2086E5FCB2DE74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1071C1751B97104F052210D5B64EA06 /* Pods-Take Me HomeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0FD1878AB59AFC16FB47F9DBD1263B84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ACF294A837ABCDF2A90609B875191E2 /* Pods-Take Me HomeUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Take Me HomeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Take Me HomeUITests/Pods-Take Me HomeUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Take_Me_HomeUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		31E16C36BC74CC5713508F78D332E966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE199C225DC9BE74C48418E274DB7C44 /* Pods-Take Me Home.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Take Me Home/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Take Me Home/Pods-Take Me Home.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Take_Me_Home;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FA451D268613890FA8A5A03801E11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A2EEB2C4C030F6E920C6180B9F17EBA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01EA2D56C52DB0DD4F51D0291AD0801D /* Pods-Take Me Home.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Take Me Home/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Take Me Home/Pods-Take Me Home.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Take_Me_Home;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9C1554433296FC27FC20520C47F9936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15EBCB75A30F2A92ACEF344D9F9E9F0 /* Pods-Take Me HomeTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Take Me HomeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Take Me HomeTests/Pods-Take Me HomeTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Take_Me_HomeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8A976EC5D0165563324FF861F28CED0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE7060F9DB9DA5B6A193E7AB505E6FB /* Pods-Take Me HomeTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Take Me HomeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Take Me HomeTests/Pods-Take Me HomeTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Take_Me_HomeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F1BF4172A524C407574F196F76D47816 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71705832E7971623E95AF12C45AE3502 /* Pods-Take Me HomeUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Take Me HomeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Take Me HomeUITests/Pods-Take Me HomeUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Take_Me_HomeUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		234D5C79A33F723E1BB83FECB58D3917 /* Build configuration list for PBXNativeTarget "Pods-Take Me HomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C1554433296FC27FC20520C47F9936 /* Debug */,
+				E8A976EC5D0165563324FF861F28CED0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E62115DE8C09934BF8D2FE5D15FED1E /* Debug */,
+				3FA451D268613890FA8A5A03801E11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB17DB2C33CCCA48D41E1ED32304A3B9 /* Build configuration list for PBXNativeTarget "Pods-Take Me HomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1BF4172A524C407574F196F76D47816 /* Debug */,
+				0FD1878AB59AFC16FB47F9DBD1263B84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D7514556C022CEF7EAB7DE80DAD7B7 /* Build configuration list for PBXNativeTarget "Pods-Take Me Home" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31E16C36BC74CC5713508F78D332E966 /* Debug */,
+				A2EEB2C4C030F6E920C6180B9F17EBA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

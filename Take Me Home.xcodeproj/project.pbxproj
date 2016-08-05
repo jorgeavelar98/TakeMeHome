@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32A05B4248D6D36ADEB06100 /* Pods_Take_Me_HomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF189AEA7A2CEBED5A7B32D /* Pods_Take_Me_HomeUITests.framework */; };
+		9360AE466813C959E64FE3DE /* Pods_Take_Me_HomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C82EF3C1F2DA2D6D52C46E /* Pods_Take_Me_HomeTests.framework */; };
+		A17040B183B3B756FE2785FE /* Pods_Take_Me_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EAF55EF808B1BB8159D25D /* Pods_Take_Me_Home.framework */; };
 		DD0214901D346867001D3F8A /* MainScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD02148F1D346867001D3F8A /* MainScene.sks */; };
 		DD04ED111D510D1F00FC2D8C /* gunReload.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED101D510D1F00FC2D8C /* gunReload.mp3 */; };
 		DD04ED131D510EF100FC2D8C /* powerUpNoise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD04ED121D510EF100FC2D8C /* powerUpNoise.mp3 */; };
@@ -63,6 +66,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13EAF55EF808B1BB8159D25D /* Pods_Take_Me_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Me_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C21B90EA22667B7B84E145 /* Pods-Take Me HomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Me HomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take Me HomeUITests/Pods-Take Me HomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B519821697F3903303D5E57 /* Pods-Take Me HomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Me HomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take Me HomeTests/Pods-Take Me HomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A12AA0E8A3069A0F68807B1 /* Pods-Take Me Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Me Home.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take Me Home/Pods-Take Me Home.debug.xcconfig"; sourceTree = "<group>"; };
+		B490D2445F4C3E1D2A339024 /* Pods-Take Me HomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Me HomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take Me HomeUITests/Pods-Take Me HomeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3C82EF3C1F2DA2D6D52C46E /* Pods_Take_Me_HomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Me_HomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0E4AE3E62F6D63F9586C15 /* Pods-Take Me HomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Me HomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Take Me HomeTests/Pods-Take Me HomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD02148F1D346867001D3F8A /* MainScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainScene.sks; sourceTree = "<group>"; };
 		DD04ED101D510D1F00FC2D8C /* gunReload.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gunReload.mp3; sourceTree = "<group>"; };
 		DD04ED121D510EF100FC2D8C /* powerUpNoise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = powerUpNoise.mp3; sourceTree = "<group>"; };
@@ -105,6 +115,8 @@
 		DDFF539E1D3456FC00064C5D /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScene.swift; sourceTree = "<group>"; };
 		DDFF53A01D345C3F00064C5D /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		DDFF53A71D34623300064C5D /* MSReferenceNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSReferenceNode.swift; sourceTree = "<group>"; };
+		DFB9494A343FB65D7578EB7F /* Pods-Take Me Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Take Me Home.release.xcconfig"; path = "Pods/Target Support Files/Pods-Take Me Home/Pods-Take Me Home.release.xcconfig"; sourceTree = "<group>"; };
+		FCF189AEA7A2CEBED5A7B32D /* Pods_Take_Me_HomeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Take_Me_HomeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17040B183B3B756FE2785FE /* Pods_Take_Me_Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9360AE466813C959E64FE3DE /* Pods_Take_Me_HomeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,12 +140,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A05B4248D6D36ADEB06100 /* Pods_Take_Me_HomeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390CDCD5A85739D52DB5E796 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A12AA0E8A3069A0F68807B1 /* Pods-Take Me Home.debug.xcconfig */,
+				DFB9494A343FB65D7578EB7F /* Pods-Take Me Home.release.xcconfig */,
+				DC0E4AE3E62F6D63F9586C15 /* Pods-Take Me HomeTests.debug.xcconfig */,
+				1B519821697F3903303D5E57 /* Pods-Take Me HomeTests.release.xcconfig */,
+				19C21B90EA22667B7B84E145 /* Pods-Take Me HomeUITests.debug.xcconfig */,
+				B490D2445F4C3E1D2A339024 /* Pods-Take Me HomeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C9ED08E63B011FCC536537B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13EAF55EF808B1BB8159D25D /* Pods_Take_Me_Home.framework */,
+				C3C82EF3C1F2DA2D6D52C46E /* Pods_Take_Me_HomeTests.framework */,
+				FCF189AEA7A2CEBED5A7B32D /* Pods_Take_Me_HomeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD4522A51D3FFE1B00FBA8F5 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +204,8 @@
 				DD6F59061D3EA41700DA69A0 /* Futura.ttc */,
 				DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */,
 				DDC5B2F31D40362D00CD66B8 /* cs_regular.ttf */,
+				6C9ED08E63B011FCC536537B /* Frameworks */,
+				390CDCD5A85739D52DB5E796 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDFF53951D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me Home" */;
 			buildPhases = (
+				AA9F3E6E371C603D6E879FE6 /* [CP] Check Pods Manifest.lock */,
 				DDFF53651D3455EC00064C5D /* Sources */,
 				DDFF53661D3455EC00064C5D /* Frameworks */,
 				DDFF53671D3455EC00064C5D /* Resources */,
+				7F71A61E9E656003F7326943 /* [CP] Embed Pods Frameworks */,
+				387864F3445909B9FA7B2640 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,9 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDFF53981D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me HomeTests" */;
 			buildPhases = (
+				99908160E4524B3B25B1E954 /* [CP] Check Pods Manifest.lock */,
 				DDFF537D1D3455EC00064C5D /* Sources */,
 				DDFF537E1D3455EC00064C5D /* Frameworks */,
 				DDFF537F1D3455EC00064C5D /* Resources */,
+				09BFF3C9F3C35712280B3B39 /* [CP] Embed Pods Frameworks */,
+				E6E1590DD47DC052CB6ECBAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,9 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDFF539B1D3455EC00064C5D /* Build configuration list for PBXNativeTarget "Take Me HomeUITests" */;
 			buildPhases = (
+				20E86F1533DA75C97D8990C0 /* [CP] Check Pods Manifest.lock */,
 				DDFF53881D3455EC00064C5D /* Sources */,
 				DDFF53891D3455EC00064C5D /* Frameworks */,
 				DDFF538A1D3455EC00064C5D /* Resources */,
+				80F43C1164996D85235A0FA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +417,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09BFF3C9F3C35712280B3B39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Take Me HomeTests/Pods-Take Me HomeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20E86F1533DA75C97D8990C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		387864F3445909B9FA7B2640 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Take Me Home/Pods-Take Me Home-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F71A61E9E656003F7326943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Take Me Home/Pods-Take Me Home-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80F43C1164996D85235A0FA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Take Me HomeUITests/Pods-Take Me HomeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99908160E4524B3B25B1E954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA9F3E6E371C603D6E879FE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6E1590DD47DC052CB6ECBAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Take Me HomeTests/Pods-Take Me HomeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDFF53651D3455EC00064C5D /* Sources */ = {
@@ -524,6 +695,7 @@
 		};
 		DDFF53961D3455EC00064C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A12AA0E8A3069A0F68807B1 /* Pods-Take Me Home.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -539,6 +711,7 @@
 		};
 		DDFF53971D3455EC00064C5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFB9494A343FB65D7578EB7F /* Pods-Take Me Home.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -554,6 +727,7 @@
 		};
 		DDFF53991D3455EC00064C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC0E4AE3E62F6D63F9586C15 /* Pods-Take Me HomeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -567,6 +741,7 @@
 		};
 		DDFF539A1D3455EC00064C5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B519821697F3903303D5E57 /* Pods-Take Me HomeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Take Me HomeTests/Info.plist";
@@ -579,6 +754,7 @@
 		};
 		DDFF539C1D3455EC00064C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19C21B90EA22667B7B84E145 /* Pods-Take Me HomeUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Take Me HomeUITests/Info.plist";
@@ -591,6 +767,7 @@
 		};
 		DDFF539D1D3455EC00064C5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B490D2445F4C3E1D2A339024 /* Pods-Take Me HomeUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Take Me HomeUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

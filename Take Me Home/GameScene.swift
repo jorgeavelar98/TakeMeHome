@@ -45,10 +45,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var healthUp2 = SKSpriteNode()
     var shootPowerUp = SKSpriteNode()
     var bullets  = SKSpriteNode()
+    var bulletsImage = SKSpriteNode()
     var life = SKSpriteNode()
     var arrow = SKSpriteNode()
     var arrow2 = SKSpriteNode()
-    var circle = SKSpriteNode(fileNamed: "circle")
+    var circle = SKSpriteNode()
     
     //emmiters
     var explosion = SKEmitterNode()
@@ -105,10 +106,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var bulletCount: Int = 20 {
         didSet {
+            let yellowColor = makeColor(234, green: 202, blue: 87, alpha: 1)
+            bulletCountLabel.fontColor = yellowColor
+            
             bulletCountLabel.text = String(bulletCount)
         }
     }
     
+    func makeColor(red: Int, green: Int, blue: Int, alpha: CGFloat) -> SKColor {
+        return SKColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
+    }
     
     
     // MARK: - Utility Methods
@@ -302,8 +309,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setUpBulletCount() {
-        bulletCountLabel.position = CGPoint(x: 0, y: 80)
-        bulletCountLabel.fontSize = 48
+        let position = life.position.y
+        bulletCountLabel.position = CGPoint(x: -8, y: position - 30)
+        bulletCountLabel.fontSize = 36
         bulletCountLabel.text  = ("20")
         bulletCountLabel.zPosition = 5
         bulletCountLabel.removeFromParent()
@@ -311,6 +319,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let fadeIn = SKAction.fadeInWithDuration(0.2)
         bulletCountLabel.runAction(fadeIn)
         addChild(bulletCountLabel)
+    }
+    
+    func setUpBulletImage() {
+        bulletsImage = SKSpriteNode (imageNamed: "missile")
+        bulletsImage.xScale = 0.035
+        bulletsImage.yScale = 0.035
+        bulletsImage.zPosition = 5
+        bulletsImage.anchorPoint = CGPoint(x: 0,y: 0)
+        let YPosition = bulletCountLabel.position.y
+        let XPosition = bulletCountLabel.position.x
+        bulletsImage.position.y = YPosition - 2
+        bulletsImage.position.x = XPosition + 30
+        
+        let fadeIn = SKAction.fadeInWithDuration(0.2)
+        bulletsImage.runAction(fadeIn)
+        addChild(bulletsImage)
     }
     
     // this is the lifeBar in the game
@@ -438,16 +462,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func instructionsCircle() {
         circle = SKSpriteNode(imageNamed: "circle")
-        circle!.position = ufo.position
-        circle!.xScale = 0.15
-        circle!.yScale = 0.15
-        circle!.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        circle!.zPosition = 4
+        circle.position = ufo.position
+        circle.xScale = 0.15
+        circle.yScale = 0.15
+        circle.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        circle.zPosition = 4
         
         let action = SKAction.rotateByAngle(CGFloat(-6.28), duration: 7)
-        circle!.runAction(SKAction.repeatActionForever(action))
+        circle.runAction(SKAction.repeatActionForever(action))
         
-        addChild(circle!)
+        addChild(circle)
     }
     
     func setUpArrows() {
@@ -484,15 +508,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         startLabel4.runAction(sequence)
         arrow.runAction(sequence)
         arrow2.runAction(sequence)
-        circle!.runAction(sequence)
+        circle.runAction(sequence)
     }
     
     func setUpGameOverLabel() {
-        gameOverLabel.fontSize = 32
+        let goldColor = makeColor(214, green: 185, blue: 0, alpha: 1)
+        
+        gameOverLabel.fontSize = 48
         gameOverLabel.text  = ("GAME OVER")
         gameOverLabel.position = CGPoint(x: 0, y: 20)
         gameOverLabel.zPosition = 10
         gameOverLabel.alpha = 0
+        gameOverLabel.fontColor = goldColor
+        
         let fadeIn = SKAction.fadeInWithDuration(1.5)
         let sequence = SKAction.sequence([fadeIn])
         gameOverLabel.runAction(sequence)
@@ -573,9 +601,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func setUpHighScoreLabel() {
         highScoreLabel.position = CGPoint(x: 0, y: -15)
-        highScoreLabel.fontSize = 24
+        highScoreLabel.fontSize = 36
         highScoreLabel.zPosition = 5
         highScoreLabel.alpha = 0
+        
         let fadeIn = SKAction.fadeInWithDuration(1.5)
         let sequence = SKAction.sequence([fadeIn])
         highScoreLabel.runAction(sequence)
@@ -814,6 +843,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if contact.bodyA.node!.name == "shootPowerUp" {
                 shootPowerUpSoundEffect()
                 setUpBulletCount()
+                setUpBulletImage()
                 bulletCount = 20
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 canShootPowerUp = true
@@ -824,6 +854,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else {
                 shootPowerUpSoundEffect()
                 setUpBulletCount()
+                setUpBulletImage()
                 bulletCount = 20
                 physicsObjectsToRemove.append(contact.bodyB.node!)
                 canShootPowerUp = true
@@ -964,6 +995,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
             let fade = SKAction.fadeOutWithDuration(0.2)
             bulletCountLabel.runAction(fade)
+            bulletsImage.runAction(fade)
         }
     }
     
