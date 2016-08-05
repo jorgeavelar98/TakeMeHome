@@ -511,6 +511,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         circle.runAction(sequence)
     }
     
+    func instructions() {
+        
+    }
+    
     func setUpGameOverLabel() {
         let goldColor = makeColor(214, green: 185, blue: 0, alpha: 1)
         
