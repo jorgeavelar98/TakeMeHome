@@ -50,6 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var arrow = SKSpriteNode()
     var arrow2 = SKSpriteNode()
     var circle = SKSpriteNode()
+    var instructions = SKSpriteNode()
     
     //emmiters
     var explosion = SKEmitterNode()
@@ -230,7 +231,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // healthUps will collide with nothing and contact only with player
         healthUp.physicsBody!.categoryBitMask   = PhysicsCategory.HealthUp
         healthUp.physicsBody!.collisionBitMask  = PhysicsCategory.None
-        healthUp.physicsBody!.contactTestBitMask = PhysicsCategory.Player
+        healthUp.physicsBody!.contactTestBitMask = PhysicsCategory.Player | PhysicsCategory.bullets
         
         
         // duration the healthUps will move across the screen
@@ -294,7 +295,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // bullets will collide with nothing and contact only with asteroid
         bullet.physicsBody!.categoryBitMask   = PhysicsCategory.bullets
         bullet.physicsBody!.collisionBitMask  = PhysicsCategory.None
-        bullet.physicsBody!.contactTestBitMask = PhysicsCategory.Asteroid
+        bullet.physicsBody!.contactTestBitMask = PhysicsCategory.Asteroid | PhysicsCategory.HealthUp
         
         let action = SKAction.moveToX(self.size.width + 30, duration: 2)
         let shotSoundEffect = SKAction.playSoundFileNamed("Machine Gun Shooting.mp3", waitForCompletion: false)
@@ -511,7 +512,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         circle.runAction(sequence)
     }
     
-    func instructions() {
+    func setUpInstructions() {
+        instructions = SKSpriteNode(imageNamed: "instructions")
+        instructions.xScale = 0.7
+        instructions.yScale = 0.7
+        instructions.position.x = 0
+        instructions.position.y = -20
+        instructions.zPosition = 10
+        
+        let fadeIn = SKAction.fadeInWithDuration(0.2)
+        let wait = SKAction.waitForDuration(2)
+        let fadeOut = SKAction.fadeOutWithDuration(0.5)
+        let seq = SKAction.sequence([fadeIn, wait, fadeOut])
+        instructions.runAction(seq)
+        addChild(instructions)
+
         
     }
     
@@ -881,6 +896,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 aststeroidSoundEffect()
                 bulletAsteroidPoof(contact.bodyB.node!.position)
             }
+            
+        } else if collision == PhysicsCategory.bullets | PhysicsCategory.HealthUp {
+            if contact.bodyA.node!.name == "bullets" {
+                physicsObjectsToRemove.append(contact.bodyA.node!)
+                physicsObjectsToRemove.append(contact.bodyB.node!)
+                aststeroidSoundEffect()
+                bulletAsteroidPoof(contact.bodyA.node!.position)
+            } else {
+                physicsObjectsToRemove.append(contact.bodyA.node!)
+                physicsObjectsToRemove.append(contact.bodyB.node!)
+                aststeroidSoundEffect()
+                bulletAsteroidPoof(contact.bodyB.node!.position)
+            }
             // no contact
         } else if collision == PhysicsCategory.Player | PhysicsCategory.None {
             //print("*Player hit nothing*")
@@ -909,6 +937,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             state = .Playing
             fadeAwayInstructions()
             scoreLabelCount()
+            setUpInstructions()
         }
         
         //when touching the screen
