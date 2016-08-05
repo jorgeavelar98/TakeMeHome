@@ -67,6 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var startLabel4 = SKLabelNode(fontNamed: "Counter-Strike")
     var bulletCountLabel = SKLabelNode(fontNamed: "Counter-Strike")
     var gameOverLabel = SKLabelNode(fontNamed: "Counter-Strike")
+    var tapLabel = SKLabelNode(fontNamed: "Counter-Strike")
     
     var healthUpSound = SKAudioNode()
     var asteroidSound = SKAudioNode()
@@ -157,14 +158,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         // *** Random duration the asteroid will move across the screen
-        let randomTime: UInt32 = 140
-        let minTime = 311.0
-        let randomDuration = (Double(arc4random_uniform(randomTime)) + minTime) / 100
-        //print("Duration is " + String(randomDuration))
-        let moveAction = SKAction.moveToX(-300, duration: randomDuration)
-        let removeAction = SKAction.removeFromParent()
-        let blockAction = SKAction.sequence([moveAction, removeAction])
-        asteroid.runAction(blockAction)
+        if score >= 60 {
+            let randomTime: UInt32 = 40
+            let minTime = 100.0
+            let randomDuration = (Double(arc4random_uniform(randomTime)) + minTime) / 100
+            let moveAction = SKAction.moveToX(-300, duration: randomDuration)
+            let removeAction = SKAction.removeFromParent()
+            let blockAction = SKAction.sequence([moveAction, removeAction])
+            asteroid.runAction(blockAction)
+        } else if score >= 15 {
+            let randomTime: UInt32 = 80
+            let minTime = 211.0
+            let randomDuration = (Double(arc4random_uniform(randomTime)) + minTime) / 100
+            let moveAction = SKAction.moveToX(-300, duration: randomDuration)
+            let removeAction = SKAction.removeFromParent()
+            let blockAction = SKAction.sequence([moveAction, removeAction])
+            asteroid.runAction(blockAction)
+        } else {
+            let randomTime: UInt32 = 140
+            let minTime = 311.0
+            let randomDuration = (Double(arc4random_uniform(randomTime)) + minTime) / 100
+            let moveAction = SKAction.moveToX(-300, duration: randomDuration)
+            let removeAction = SKAction.removeFromParent()
+            let blockAction = SKAction.sequence([moveAction, removeAction])
+            asteroid.runAction(blockAction)
+        }
+        
         
         // *** Random rotation
         let randomRotation = (Double(arc4random_uniform(1256)) - 628) / 100
@@ -338,6 +357,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(bulletsImage)
     }
     
+    func setUpShootInstructions() {
+        tapLabel.text = "Tap"
+        tapLabel.fontSize = 24
+        tapLabel.position = CGPoint(x: -130, y: -80)
+        addChild(tapLabel)
+        
+        tapLabel.alpha = 0
+        let fadeIn = SKAction.fadeInWithDuration(0.5)
+        let wait = SKAction.waitForDuration(0.2)
+        let fadeOut = SKAction.fadeOutWithDuration(0.5)
+        let seq = SKAction.sequence([fadeIn, wait, fadeOut])
+        let forever = SKAction.repeatActionForever(seq)
+        tapLabel.runAction(forever, withKey: "actionC")
+    }
+    
     // this is the lifeBar in the game
     func setUpLifeBar() {
         let lifeBar = SKSpriteNode(imageNamed: "life_bg")
@@ -367,12 +401,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.createAsteroids()
         }
         
+        
         // delay between every asteroid
-        let asteroidDelay = SKAction.waitForDuration(0.30)
-        let asteroidSequence = SKAction.sequence([asteroidDelay, createAsteroids])
-        let repeatAsteroids = SKAction.repeatActionForever(asteroidSequence)
-        runAction(repeatAsteroids)
-        //print("avoid me")
+        if score >= 70 {
+            let asteroidDelay = SKAction.waitForDuration(0.05)
+            let asteroidSequence = SKAction.sequence([asteroidDelay, createAsteroids])
+            let repeatAsteroids = SKAction.repeatActionForever(asteroidSequence)
+            runAction(repeatAsteroids)
+        } else if score >= 40 {
+            let asteroidDelay = SKAction.waitForDuration(0.15)
+            let asteroidSequence = SKAction.sequence([asteroidDelay, createAsteroids])
+            let repeatAsteroids = SKAction.repeatActionForever(asteroidSequence)
+            runAction(repeatAsteroids)
+        } else {
+            let asteroidDelay = SKAction.waitForDuration(0.30)
+            let asteroidSequence = SKAction.sequence([asteroidDelay, createAsteroids])
+            let repeatAsteroids = SKAction.repeatActionForever(asteroidSequence)
+            runAction(repeatAsteroids)
+        }
     }
     
     //this will create the powerUps action spawning from the right side of the screen
@@ -863,6 +909,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 shootPowerUpSoundEffect()
                 setUpBulletCount()
                 setUpBulletImage()
+                setUpShootInstructions()
                 bulletCount = 20
                 physicsObjectsToRemove.append(contact.bodyA.node!)
                 canShootPowerUp = true
@@ -874,6 +921,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 shootPowerUpSoundEffect()
                 setUpBulletCount()
                 setUpBulletImage()
+                setUpShootInstructions()
                 bulletCount = 20
                 physicsObjectsToRemove.append(contact.bodyB.node!)
                 canShootPowerUp = true
@@ -955,6 +1003,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if location.x < 0 {
                     setUpBullets()
                     bulletCount -= 1
+                    
+                    let fadeOut = SKAction.fadeOutWithDuration(0.5)
+                    tapLabel.runAction(fadeOut)
+                    tapLabel.removeFromParent()
+                    tapLabel.removeActionForKey("actionC")
                 }
             }
         }
@@ -1046,6 +1099,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.removeActionForKey("actionA")
         self.removeActionForKey("actionB")
         self.removeActionForKey("scoreCount")
+        
+        let fadeOut = SKAction.fadeOutWithDuration(0.5)
+        tapLabel.runAction(fadeOut)
+        tapLabel.removeFromParent()
+        tapLabel.removeActionForKey("actionC")
         
         setUpExplosion(ufo.position)
         
