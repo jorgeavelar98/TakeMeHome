@@ -7,7 +7,7 @@
 //
 
 import SpriteKit
-
+import UIKit
 
 
 // MARK: - GameState Enum
@@ -51,6 +51,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var arrow2 = SKSpriteNode()
     var circle = SKSpriteNode()
     var instructions = SKSpriteNode()
+    
+    var viewController: GameViewController!
     
     //emmiters
     var explosion = SKEmitterNode()
@@ -616,7 +618,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let reveal: SKTransition = SKTransition.fadeWithDuration(1)
             skView.presentScene(scene, transition: reveal)
             
-            
+            scene.viewController = self.viewController
             self.state = .Ready
         }
     }
@@ -1118,10 +1120,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setUpHighScoreLabel()
         
+        viewController.loadAd()
+        
         let fadeAway = SKAction.fadeOutWithDuration(1)
         let remove = SKAction.removeFromParent()
         let sequence = SKAction.sequence([fadeAway, remove])
         controlButton.runAction(sequence)
+        
     }
     
 

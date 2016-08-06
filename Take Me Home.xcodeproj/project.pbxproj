@@ -23,6 +23,10 @@
 		DD0B761F1D3ECBEC00FF7F81 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */; };
 		DD0E0BCC1D50149C002082C3 /* Machine Gun Shooting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DD0E0BCB1D50149C002082C3 /* Machine Gun Shooting.mp3 */; };
 		DD0E16231D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */; };
+		DD232F0A1D5541EA00C0F921 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD232F091D5541EA00C0F921 /* GoogleService-Info.plist */; };
+		DD232F161D55448100C0F921 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD232F0C1D55448100C0F921 /* GoogleMobileAds.framework */; };
+		DD232F171D55448100C0F921 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD232F141D55448100C0F921 /* README.txt */; };
+		DD232F181D55448100C0F921 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD232F151D55448100C0F921 /* README.txt */; };
 		DD4522A71D3FFED900FBA8F5 /* mainBackground.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */; };
 		DD4759E51D37F61C009F2860 /* asteroidPoof.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD4759E41D37F61C009F2860 /* asteroidPoof.sks */; };
 		DD50A60A1D36FB1000E85E7F /* healthUpPoof.sks in Resources */ = {isa = PBXBuildFile; fileRef = DD50A6081D36FB1000E85E7F /* healthUpPoof.sks */; };
@@ -86,6 +90,16 @@
 		DD0B761E1D3ECBEC00FF7F81 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		DD0E0BCB1D50149C002082C3 /* Machine Gun Shooting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Machine Gun Shooting.mp3"; sourceTree = "<group>"; };
 		DD0E16221D3EEC7800322720 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
+		DD232F091D5541EA00C0F921 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD232F0C1D55448100C0F921 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		DD232F0E1D55448100C0F921 /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		DD232F0F1D55448100C0F921 /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		DD232F101D55448100C0F921 /* GADMediationAdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMediationAdRequest.h; sourceTree = "<group>"; };
+		DD232F111D55448100C0F921 /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
+		DD232F121D55448100C0F921 /* GADMRewardBasedVideoAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		DD232F131D55448100C0F921 /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		DD232F141D55448100C0F921 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		DD232F151D55448100C0F921 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		DD4522A61D3FFED900FBA8F5 /* mainBackground.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = mainBackground.sks; path = ../mainBackground.sks; sourceTree = "<group>"; };
 		DD4759E41D37F61C009F2860 /* asteroidPoof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = asteroidPoof.sks; path = ../asteroidPoof.sks; sourceTree = "<group>"; };
 		DD50A6081D36FB1000E85E7F /* healthUpPoof.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = healthUpPoof.sks; sourceTree = "<group>"; };
@@ -124,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD232F161D55448100C0F921 /* GoogleMobileAds.framework in Frameworks */,
 				A17040B183B3B756FE2785FE /* Pods_Take_Me_Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +183,31 @@
 				FCF189AEA7A2CEBED5A7B32D /* Pods_Take_Me_HomeUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD232F0B1D55448100C0F921 /* GoogleMobileAdsSdkiOS-7.9.1 */ = {
+			isa = PBXGroup;
+			children = (
+				DD232F0C1D55448100C0F921 /* GoogleMobileAds.framework */,
+				DD232F0D1D55448100C0F921 /* Mediation Adapters */,
+				DD232F151D55448100C0F921 /* README.txt */,
+			);
+			name = "GoogleMobileAdsSdkiOS-7.9.1";
+			path = "../GoogleMobileAdsSdkiOS-7.9.1";
+			sourceTree = "<group>";
+		};
+		DD232F0D1D55448100C0F921 /* Mediation Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				DD232F0E1D55448100C0F921 /* GADMAdNetworkAdapterProtocol.h */,
+				DD232F0F1D55448100C0F921 /* GADMAdNetworkConnectorProtocol.h */,
+				DD232F101D55448100C0F921 /* GADMediationAdRequest.h */,
+				DD232F111D55448100C0F921 /* GADMEnums.h */,
+				DD232F121D55448100C0F921 /* GADMRewardBasedVideoAdNetworkAdapterProtocol.h */,
+				DD232F131D55448100C0F921 /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */,
+				DD232F141D55448100C0F921 /* README.txt */,
+			);
+			path = "Mediation Adapters";
 			sourceTree = "<group>";
 		};
 		DD4522A51D3FFE1B00FBA8F5 /* Effects */ = {
@@ -222,6 +262,7 @@
 		DDFF536B1D3455EC00064C5D /* Take Me Home */ = {
 			isa = PBXGroup;
 			children = (
+				DD232F0B1D55448100C0F921 /* GoogleMobileAdsSdkiOS-7.9.1 */,
 				DD4522A51D3FFE1B00FBA8F5 /* Effects */,
 				DDFF536C1D3455EC00064C5D /* AppDelegate.swift */,
 				DDA0BD4D1D48253C004798CC /* SKTAudio.swift */,
@@ -238,6 +279,7 @@
 				DDFF53771D3455EC00064C5D /* Assets.xcassets */,
 				DDFF53791D3455EC00064C5D /* LaunchScreen.storyboard */,
 				DDFF537C1D3455EC00064C5D /* Info.plist */,
+				DD232F091D5541EA00C0F921 /* GoogleService-Info.plist */,
 			);
 			path = "Take Me Home";
 			sourceTree = "<group>";
@@ -384,6 +426,8 @@
 				DDFF53781D3455EC00064C5D /* Assets.xcassets in Resources */,
 				DD5F92D21D3D82EF00162834 /* smoke.sks in Resources */,
 				DD0B761F1D3ECBEC00FF7F81 /* GameScene.sks in Resources */,
+				DD232F0A1D5541EA00C0F921 /* GoogleService-Info.plist in Resources */,
+				DD232F181D55448100C0F921 /* README.txt in Resources */,
 				DD50A60A1D36FB1000E85E7F /* healthUpPoof.sks in Resources */,
 				DD04ED171D5147C300FC2D8C /* blast (1).mp3 in Resources */,
 				DDC5B2F41D40362D00CD66B8 /* cs_regular.ttf in Resources */,
@@ -398,6 +442,7 @@
 				DD0E0BCC1D50149C002082C3 /* Machine Gun Shooting.mp3 in Resources */,
 				DD04ED151D5142E400FC2D8C /* asteroidExplosion.mp3 in Resources */,
 				DD04ED131D510EF100FC2D8C /* powerUpNoise.mp3 in Resources */,
+				DD232F171D55448100C0F921 /* README.txt in Resources */,
 				DD04ED1A1D51499D00FC2D8C /* boom.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,10 +745,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.9.1",
+				);
 				INFOPLIST_FILE = "Take Me Home/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-Home";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JorgeAvelar.Take-Me-Home";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -717,10 +766,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS-7.9.1",
+				);
 				INFOPLIST_FILE = "Take Me Home/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.makeschool.Take-Me-Home";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JorgeAvelar.Take-Me-Home";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

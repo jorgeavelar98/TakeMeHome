@@ -14,6 +14,7 @@ class MainScene: SKScene {
     var volume = SKSpriteNode()
     var volume2 = SKSpriteNode()
     var mainBackground = SKEmitterNode()
+    var viewController: GameViewController!
     
     /* UI Connections */
     var playButton: MSButtonNode!
@@ -111,7 +112,7 @@ class MainScene: SKScene {
             
             /* Load Game scene */
             let scene = GameScene(fileNamed:"GameScene") as GameScene!
-            
+            scene.viewController = self.viewController
             
             /* Ensure correct aspect mode */
             scene.scaleMode = .AspectFit
@@ -150,6 +151,7 @@ class MainScene: SKScene {
             /* Start game scene */
             let reveal: SKTransition = SKTransition.fadeWithDuration(2)
             skView.presentScene(scene, transition: reveal)
+            
         }
         
     }
