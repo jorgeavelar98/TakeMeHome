@@ -448,7 +448,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // delay between healthUps
         let randomTime: UInt32 = 5
-        let minTime = 2.0
+        let minTime = 2.7
         let randomDuration = (Double(arc4random_uniform(randomTime)) + minTime)
         let shootPowerUpsDelay = SKAction.waitForDuration(randomDuration)
         let shootPowerUpsSequence = SKAction.sequence([shootPowerUpsDelay, createShootPowerUps])
@@ -568,9 +568,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         instructions.position.y = -20
         instructions.zPosition = 10
         
-        let fadeIn = SKAction.fadeInWithDuration(0.2)
+        let fadeIn = SKAction.fadeInWithDuration(0.5)
         let wait = SKAction.waitForDuration(2)
-        let fadeOut = SKAction.fadeOutWithDuration(0.5)
+        let fadeOut = SKAction.fadeOutWithDuration(0.3)
         let seq = SKAction.sequence([fadeIn, wait, fadeOut])
         instructions.runAction(seq)
         addChild(instructions)
